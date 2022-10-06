@@ -8,12 +8,15 @@ namespace SB
     {
         [SerializeField] private GameObject _highlight;
         private bool _isSelected;
+        private float _cardZValue = -0.001f;
+        private void Update()
+        {
+            transform.position = new Vector3(transform.position.x,transform.position.y,_cardZValue);
+        }
         private void OnMouseDown()
         {
             if(!_isSelected)
-                //transform.position = CompostManager.Instance.GetCompostTransform().position;
                 HandManager.Instance.SelectSingleCard(this);
-            
         }
         private void OnMouseEnter()
         {

@@ -18,6 +18,8 @@ namespace SB
         }
         public void EndTurn()
         {
+            HandManager.Instance.DiscardHand();
+            HandManager.Instance.GenerateHand();
             _currentTurn++;
         }
     }

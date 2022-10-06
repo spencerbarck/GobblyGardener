@@ -222,6 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _renderer: {fileID: 131804361}
   _hasCard: 0
+  _storedCard: {fileID: 0}
 --- !u!1 &277567687
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,6 +322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _renderer: {fileID: 277567689}
   _hasCard: 0
+  _storedCard: {fileID: 0}
 --- !u!1 &277621172
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,6 +971,23 @@ MonoBehaviour:
   - {fileID: 1960110644893261061, guid: 7fff43b67f5c8624d8ba7d52e669b44d, type: 3}
   - {fileID: 1960110644893261061, guid: 7fff43b67f5c8624d8ba7d52e669b44d, type: 3}
   - {fileID: 1960110644893261061, guid: 7fff43b67f5c8624d8ba7d52e669b44d, type: 3}
+  - {fileID: 1960110644893261061, guid: 7fff43b67f5c8624d8ba7d52e669b44d, type: 3}
+  - {fileID: 1960110644893261061, guid: 7fff43b67f5c8624d8ba7d52e669b44d, type: 3}
+  - {fileID: 1960110644893261061, guid: 7fff43b67f5c8624d8ba7d52e669b44d, type: 3}
+  - {fileID: 1960110644893261061, guid: 7fff43b67f5c8624d8ba7d52e669b44d, type: 3}
+  - {fileID: 1960110644893261061, guid: 7fff43b67f5c8624d8ba7d52e669b44d, type: 3}
+  - {fileID: 1960110644893261061, guid: 7fff43b67f5c8624d8ba7d52e669b44d, type: 3}
+  - {fileID: 1960110644893261061, guid: 7fff43b67f5c8624d8ba7d52e669b44d, type: 3}
+  - {fileID: 1960110644893261061, guid: 7fff43b67f5c8624d8ba7d52e669b44d, type: 3}
+  - {fileID: 1960110644893261061, guid: 7fff43b67f5c8624d8ba7d52e669b44d, type: 3}
+  - {fileID: 1960110644893261061, guid: 7fff43b67f5c8624d8ba7d52e669b44d, type: 3}
+  - {fileID: 1960110644893261061, guid: 7fff43b67f5c8624d8ba7d52e669b44d, type: 3}
+  - {fileID: 1960110644893261061, guid: 7fff43b67f5c8624d8ba7d52e669b44d, type: 3}
+  - {fileID: 1960110644893261061, guid: 7fff43b67f5c8624d8ba7d52e669b44d, type: 3}
+  - {fileID: 1960110644893261061, guid: 7fff43b67f5c8624d8ba7d52e669b44d, type: 3}
+  - {fileID: 1960110644893261061, guid: 7fff43b67f5c8624d8ba7d52e669b44d, type: 3}
+  - {fileID: 1960110644893261061, guid: 7fff43b67f5c8624d8ba7d52e669b44d, type: 3}
+  - {fileID: 1960110644893261061, guid: 7fff43b67f5c8624d8ba7d52e669b44d, type: 3}
 --- !u!1 &417884982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,7 +1103,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 470534601}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1606632802}
+        m_TargetAssemblyTypeName: SB.HandManager, Assembly-CSharp
+        m_MethodName: DiscardCardSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &470534601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2059,6 +2090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _renderer: {fileID: 1315500807}
   _hasCard: 0
+  _storedCard: {fileID: 0}
 --- !u!1 &1331291199
 GameObject:
   m_ObjectHideFlags: 0
@@ -2158,6 +2190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _renderer: {fileID: 1331291201}
   _hasCard: 0
+  _storedCard: {fileID: 0}
 --- !u!1 &1354360910
 GameObject:
   m_ObjectHideFlags: 0
@@ -2296,6 +2329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _renderer: {fileID: 1556938784}
   _hasCard: 0
+  _storedCard: {fileID: 0}
 --- !u!1 &1589751610
 GameObject:
   m_ObjectHideFlags: 0
@@ -2332,7 +2366,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -100, y: 50}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1589751612
 MonoBehaviour:

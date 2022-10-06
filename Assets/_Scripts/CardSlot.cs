@@ -8,10 +8,12 @@ namespace SB
     {
         [SerializeField] private SpriteRenderer _renderer;
         public bool _hasCard;
-        public void AddCard()
+        public Card _storedCard;
+        public void AddCard(Card card)
         {
             _hasCard=true;
             _renderer.color = Color.blue;
+            _storedCard = card;
         }
         public void RemoveCard()
         {
@@ -21,6 +23,7 @@ namespace SB
             {
                 _renderer.color = color;
             }
+            _storedCard = null;
         }
     }
 }

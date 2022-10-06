@@ -12,7 +12,6 @@ namespace SB
         {
             Instance = this;
         }
-
         public Transform GetCompostTransform(){ return _compostTransform;}
     }
 }
