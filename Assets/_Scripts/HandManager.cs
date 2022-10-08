@@ -7,34 +7,30 @@ namespace SB
     public class HandManager : MonoBehaviour
     {
         public static HandManager Instance;
-        [SerializeField] CardSlot[] _cardSlots;
+        [SerializeField] List<CardSlot> _cardSlots;
         [SerializeField] Card _cardPrefab;
         public Card _cardSelected;
-        public Dictionary<Card, int> _handDictionary;
+        public List<Card> _hand = new List<Card>();
         private void Awake()
         {
             Instance = this;
         }
         private void Start()
         {
+            DeckManager.Instance.ShuffleDeck();
             GenerateHand();
         }
         public void GenerateHand()
         {
-            _handDictionary = new Dictionary<Card,int>();
-            for(int i = 0; i<_cardSlots.Length ; i++)
+            for(int i = 0; i<_cardSlots.Count ; i++)
             {
                 if(!_cardSlots[i]._hasCard)
                     DrawCard();
             }
         }
-        private bool IsInHand(Card card)
-        {
-            return _handDictionary.TryGetValue(card,out var cardSlotIndex);
-        }
         public void SelectSingleCard(Card card)
         {
-            if(IsInHand(card))
+            if(_hand.Contains(card))
             {
                 if(_cardSelected != null)
                     _cardSelected.UnSelectCard();
@@ -45,33 +41,38 @@ namespace SB
         }
         public void PlaceCardSelected(Tile tile)
         {
-            if(_handDictionary.TryGetValue(_cardSelected,out var cardSlotIndex))
+            foreach(CardSlot cardSlot in _cardSlots)
             {
-                _cardSlots[cardSlotIndex].RemoveCard();
-
-                _handDictionary.Remove(_cardSelected);
-
-                _cardSelected.transform.position = tile.transform.position;
-                _cardSelected.UnSelectCard();
-                _cardSelected = null;
+                if(cardSlot._storedCard == _cardSelected)
+                {
+                    cardSlot.RemoveCard();
+                }
             }
+
+            _hand.Remove(_cardSelected);
+
+            _cardSelected.transform.position = tile.transform.position;
+            _cardSelected.UnSelectCard();
+            _cardSelected = null;
         }
         public void DrawCard()
         {
             if(DeckManager.Instance._deck.Count >= 1)
             {
                 Card randCard = DeckManager.Instance._deck[Random.Range(0,DeckManager.Instance._deck.Count)];
-                for(int i = 0; i < _cardSlots.Length; i++)
+                for(int i = 0; i < _cardSlots.Count; i++)
                 {
                     if(!_cardSlots[i]._hasCard)
                     {
                         CardSlot cardSlot = _cardSlots[i];
-                        var card = Instantiate(_cardPrefab,cardSlot.transform.position, Quaternion.identity);
-                        cardSlot.AddCard(card);
-
-                        _handDictionary[card] = i;
 
                         DeckManager.Instance._deck.Remove(randCard);
+                        
+                        var newCard = Instantiate(randCard,cardSlot.transform.position, Quaternion.identity);
+                        cardSlot.AddCard(newCard);
+
+                        _hand.Add(newCard);
+
                         return;
                     }
                 }
@@ -81,25 +82,28 @@ namespace SB
         {
             if(_cardSelected!= null)
             {
-                if(_handDictionary.TryGetValue(_cardSelected,out var cardSlotIndex))
+                foreach(CardSlot cardSlot in _cardSlots)
                 {
-                    _cardSlots[cardSlotIndex].RemoveCard();
-                    _handDictionary.Remove(_cardSelected);
-
-                    _cardSelected.transform.position = CompostManager.Instance.GetCompostTransform().position;
-                    _cardSelected.UnSelectCard();
-                    _cardSelected = null;
+                    if(cardSlot._storedCard == _cardSelected)
+                    {
+                        cardSlot.RemoveCard();
+                    }
                 }
+                _hand.Remove(_cardSelected);
+
+                _cardSelected.transform.position = CompostManager.Instance.GetCompostTransform().position;
+                _cardSelected.UnSelectCard();
+                _cardSelected = null;
             }
         }
         public void DiscardHand()
         {
-            for(int i = 0; i < _cardSlots.Length; i++)
+            for(int i = 0; i < _cardSlots.Count; i++)
             {
                 if(_cardSlots[i]._hasCard)
                 {
                     Card card = _cardSlots[i]._storedCard;
-                    _handDictionary.Remove(card);
+                    _hand.Remove(card);
                     card.transform.position = CompostManager.Instance.GetCompostTransform().position;
                     if(card=_cardSelected)
                     {
