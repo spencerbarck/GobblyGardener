@@ -48,8 +48,10 @@ namespace SB
                     cardSlot.RemoveCard();
                 }
             }
+            tile.SetTileCard(_cardSelected);
 
             _hand.Remove(_cardSelected);
+            
 
             _cardSelected.transform.position = tile.transform.position;
             _cardSelected.UnSelectCard();

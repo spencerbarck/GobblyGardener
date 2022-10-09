@@ -9,7 +9,7 @@ namespace SB
     {
         public static GridManager Instance;
         [SerializeField] private Transform _parent;
-        [SerializeField] private int _width, _height;
+        [SerializeField] public int _width, _height;
         [SerializeField] private float _startXPos, _startYPos, _xTileShift, _yTileShift;
         [SerializeField] private Tile _tilePrefab;
         public Dictionary<Vector2, Tile> _tileDictionary;

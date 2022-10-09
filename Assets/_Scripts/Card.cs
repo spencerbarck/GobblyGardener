@@ -98,5 +98,9 @@ namespace SB
             _cardBaseImage.SetActive(false);
             _cardHighlightImage.SetActive(false);
         }
+        public void HarvestCard()
+        {
+            ResourcesManager.Instance._flowerCount += _cardGrowthCost;
+        }
     }
 }
