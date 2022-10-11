@@ -934,7 +934,7 @@ GameObject:
   - component: {fileID: 400195972}
   - component: {fileID: 400195973}
   m_Layer: 0
-  m_Name: Deck Manager
+  m_Name: Guarden Deck Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1645,7 +1645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016f7f507f7a28246ba8188ca798b940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deckCountText: {fileID: 1589751612}
+  _gardenDeckCountText: {fileID: 0}
+  _spellDeckCountText: {fileID: 0}
 --- !u!114 &543912726
 MonoBehaviour:
   m_ObjectHideFlags: 0
