@@ -18,21 +18,11 @@ namespace SB
         }
         public void EndTurn()
         {
-            HarvestGuarden();
+            GridManager.Instance.HarvestGarden();
+
             HandManager.Instance.DiscardHand();
             HandManager.Instance.GenerateHand();
             _currentTurn++;
-        }
-        private void HarvestGuarden()
-        {
-            for(int x=0;x<GridManager.Instance._width; x++)
-            {
-                for(int y=0;y<GridManager.Instance._height; y++)
-                {
-                    GridManager.Instance._tileDictionary.TryGetValue(new Vector2(x,y), out Tile tile);
-                    tile.HarvestCardOnTile();
-                }
-            }
         }
     }
 }

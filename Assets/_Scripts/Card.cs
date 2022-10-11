@@ -22,9 +22,11 @@ namespace SB
         [SerializeField] public Sprite _cardSprite;
         [SerializeField] public int _cardGrowthCost;
         [SerializeField] public string _cardRulesText;
+
         private bool _isSelected;
         private bool _isEnlarged;
         private float _cardZValue = -0.001f;
+        public CardType _cardType;
         private void Start()
         {
             _cardBaseImage.SetActive(false);
@@ -101,6 +103,13 @@ namespace SB
         public void HarvestCard()
         {
             ResourcesManager.Instance._flowerCount += _cardGrowthCost;
+            ResourcesManager.Instance._foodCount += _cardManaCost;
         }
     }
+}
+
+public enum CardType 
+{
+  Garden,
+  Spell
 }

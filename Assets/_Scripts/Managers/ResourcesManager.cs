@@ -8,6 +8,7 @@ namespace SB
     {
         public static ResourcesManager Instance;
         public int _flowerCount;
+        public int _foodCount;
         private void Awake()
         {
             Instance = this;

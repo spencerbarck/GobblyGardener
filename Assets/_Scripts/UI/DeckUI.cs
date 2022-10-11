@@ -12,6 +12,7 @@ namespace SB
         private void Update()
         {
             _gardenDeckCountText.text = GardenDeckManager.Instance._deck.Count.ToString();
+            _spellDeckCountText.text = SpellDeckManager.Instance._deck.Count.ToString();
         }
         
     }

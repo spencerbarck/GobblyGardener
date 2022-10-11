@@ -584,6 +584,7 @@ MonoBehaviour:
   _cardSprite: {fileID: 21300000, guid: 8849f990fcce5194ca8e1d358771e66a, type: 3}
   _cardGrowthCost: 1
   _cardRulesText: Yeilds One Flower
+  _cardType: 0
 --- !u!61 &8306015245685303153
 BoxCollider2D:
   m_ObjectHideFlags: 0
