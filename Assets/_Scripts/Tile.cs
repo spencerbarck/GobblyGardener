@@ -10,7 +10,7 @@ namespace SB
         [SerializeField] private SpriteRenderer _renderer;
         [SerializeField] private GameObject _highlight;
         private GridManager _gridManager;
-        private bool _hasCard;
+        public bool _hasCard;
         public float _tileValue;
         private Card _tileCard;
         private void Start()
@@ -47,19 +47,33 @@ namespace SB
         }
         private void OnMouseDown()
         {
-            if((HandManager.Instance._cardSelected!=null)&&(!_hasCard))
+            if((HandManager.Instance._cardSelected!=null))
             {
-                HandManager.Instance.PlaceCardSelected(this);
+                if(HandManager.Instance._cardSelected._cardType == CardType.Spell)
+                {
+                    HandManager.Instance.PlaceCardSelected(this);
+                } 
+                else if(HandManager.Instance._cardSelected._cardType == CardType.Garden)
+                {
+                    if(!_hasCard)
+                        HandManager.Instance.PlaceCardSelected(this);
+                }
             }
         }
         public void SetTileCard(Card card)
         {
             _tileCard = card;
+            _hasCard = true;
         }
         public void HarvestCardOnTile()
         {
             if(_tileCard!=null)
                 _tileCard.HarvestCard();
+        }
+        public void WaterCardOnTile()
+        {
+            if(_tileCard!=null)
+                _tileCard.WaterCard();
         }
     }
 }

@@ -570,6 +570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840a2fb15da615447a44c62412dee3ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cardBackSpriteRenderer: {fileID: 3652784755321740072}
   _highlight: {fileID: 4046226622406558708}
   _cardCanvas: {fileID: 2419358328195788659}
   _cardBaseImage: {fileID: 3424350679945073107}
@@ -584,6 +585,10 @@ MonoBehaviour:
   _cardSprite: {fileID: 21300000, guid: 8849f990fcce5194ca8e1d358771e66a, type: 3}
   _cardGrowthCost: 1
   _cardRulesText: Yeilds One Flower
+  _foodYeild: 0
+  _flowerYeild: 1
+  _dryColor: {r: 0.49056602, g: 0.22816822, b: 0.057386946, a: 1}
+  _wateredColor: {r: 0.33962262, g: 0.1569604, b: 0.039729424, a: 1}
   _cardType: 0
 --- !u!61 &8306015245685303153
 BoxCollider2D:

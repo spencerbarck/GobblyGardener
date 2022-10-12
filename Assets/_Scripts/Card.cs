@@ -8,6 +8,7 @@ namespace SB
 {
     public class Card : MonoBehaviour
     {
+        [SerializeField] private SpriteRenderer _cardBackSpriteRenderer;
         [SerializeField] private GameObject _highlight;
         [SerializeField] private Canvas _cardCanvas;
         [SerializeField] private GameObject _cardBaseImage;
@@ -22,11 +23,18 @@ namespace SB
         [SerializeField] public Sprite _cardSprite;
         [SerializeField] public int _cardGrowthCost;
         [SerializeField] public string _cardRulesText;
+        [SerializeField] public int _foodYeild;
+        [SerializeField] public int _flowerYeild;
 
+        
+        [SerializeField] private Color _dryColor;
+        [SerializeField] private Color _wateredColor;
         private bool _isSelected;
         private bool _isEnlarged;
+        private bool _isWatered;
         private float _cardZValue = -0.001f;
         public CardType _cardType;
+        public Tile _cardTile;
         private void Start()
         {
             _cardBaseImage.SetActive(false);
@@ -36,6 +44,9 @@ namespace SB
             _cardImage.sprite = _cardSprite;
             _growthCostText.text = _cardGrowthCost.ToString();
             _rulesText.text = _cardRulesText;
+
+            _cardBackSpriteRenderer.color = _dryColor;
+            _cardBaseImage.GetComponent<Image>().color = _dryColor;
         }
         private void Update()
         {
@@ -50,6 +61,13 @@ namespace SB
         }
         private void OnMouseDown()
         {
+            if((HandManager.Instance._cardSelected!=null)&&(HandManager.Instance._cardSelected._cardType == CardType.Spell))
+            {
+                if(_cardTile != null)
+                {
+                    HandManager.Instance.PlaceCardSelected(_cardTile);
+                }
+            }
             if(!_isSelected)
                 HandManager.Instance.SelectSingleCard(this);
         }
@@ -100,10 +118,31 @@ namespace SB
             _cardBaseImage.SetActive(false);
             _cardHighlightImage.SetActive(false);
         }
+        public void WaterCard()
+        {
+            _isWatered = true;
+            _cardBackSpriteRenderer.color = _wateredColor;
+            _cardBaseImage.GetComponent<Image>().color = _wateredColor;
+        }
         public void HarvestCard()
         {
-            ResourcesManager.Instance._flowerCount += _cardGrowthCost;
-            ResourcesManager.Instance._foodCount += _cardManaCost;
+            if(_isWatered)
+            {
+                if(_cardGrowthCost>0)
+                {
+                    _cardGrowthCost--;
+                    _growthCostText.text = _cardGrowthCost.ToString();
+                }
+                else
+                {
+                    ResourcesManager.Instance._flowerCount += _flowerYeild;
+                    ResourcesManager.Instance._foodCount += _foodYeild;
+                }
+            }
+            
+            _isWatered = false;
+            _cardBackSpriteRenderer.color = _dryColor;
+            _cardBaseImage.GetComponent<Image>().color = _dryColor;
         }
     }
 }

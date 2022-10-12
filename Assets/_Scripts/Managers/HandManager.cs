@@ -32,6 +32,9 @@ namespace SB
         {
             if(_hand.Contains(card))
             {
+                DrawLines.Instance._startLinePosition = card.transform.position;
+                DrawLines.Instance._isDrawingLine = true;
+
                 if(_cardSelected != null)
                     _cardSelected.UnSelectCard();
 
@@ -41,6 +44,12 @@ namespace SB
         }
         public void PlaceCardSelected(Tile tile)
         {
+            if((_cardSelected._cardType == CardType.Spell)&&(!tile._hasCard))
+            {
+                return;
+            }
+
+            DrawLines.Instance.HideLine();
             foreach(CardSlot cardSlot in _cardSlots)
             {
                 if(cardSlot._storedCard == _cardSelected)
@@ -48,12 +57,20 @@ namespace SB
                     cardSlot.RemoveCard();
                 }
             }
-            tile.SetTileCard(_cardSelected);
-
             _hand.Remove(_cardSelected);
-            
 
-            _cardSelected.transform.position = tile.transform.position;
+            if(_cardSelected._cardType == CardType.Garden)
+            {
+                tile.SetTileCard(_cardSelected);
+                _cardSelected._cardTile = tile;
+                _cardSelected.transform.position = tile.transform.position;
+            }
+            else if(_cardSelected._cardType == CardType.Spell)
+            {
+                tile.WaterCardOnTile();
+                _cardSelected.transform.position = SpellHistoryManager.Instance.GetSpellHistoryTransform().position;
+            }
+
             _cardSelected.UnSelectCard();
             _cardSelected = null;
         }
