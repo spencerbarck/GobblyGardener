@@ -21,7 +21,7 @@ namespace SB
             GridManager.Instance.HarvestGarden();
 
             HandManager.Instance.DiscardHand();
-            HandManager.Instance.GenerateHand();
+            HandManager.Instance.GenerateHand("Spell");
             _currentTurn++;
         }
     }

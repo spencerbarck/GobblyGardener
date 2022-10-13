@@ -16,16 +16,38 @@ namespace SB
             Instance = this;
         }
         private void Start()
-        {
+        {       
+            InstantiateAllCards();    
             GardenDeckManager.Instance.ShuffleDeck();
-            GenerateHand();
+            GenerateHand("Garden");
         }
-        public void GenerateHand()
+        private void InstantiateAllCards()
+        {
+            List<Card> tempGardenDeck = new List<Card>();
+            foreach(Card card in GardenDeckManager.Instance._deck)
+            {
+                var newCard = Instantiate(card,new Vector2(0,0), Quaternion.identity);
+                newCard.gameObject.SetActive(false);
+                tempGardenDeck.Add(newCard);
+            }
+            GardenDeckManager.Instance._deck=tempGardenDeck;
+
+            List<Card> tempSpellDeck = new List<Card>();
+            foreach(Card card in SpellDeckManager.Instance._deck)
+            {
+                var newCard = Instantiate(card,new Vector2(0,0), Quaternion.identity);
+                newCard.gameObject.SetActive(false);
+                tempSpellDeck.Add(newCard);
+            }
+            SpellDeckManager.Instance._deck=tempSpellDeck;
+        }
+        public void GenerateHand(string cardType)
         {
             for(int i = 0; i<_cardSlots.Count ; i++)
             {
                 if(!_cardSlots[i]._hasCard)
-                    DrawGardenCard();
+                    if(cardType == "Garden")DrawGardenCard();
+                    if(cardType == "Spell")DrawSpellCard();
             }
         }
         public void SelectSingleCard(Card card)
@@ -47,6 +69,15 @@ namespace SB
             if((_cardSelected._cardType == CardType.Spell)&&(!tile._hasCard))
             {
                 return;
+            }
+
+            if(_cardSelected._cardManaCost>ResourcesManager.Instance._manaCount)
+            {
+                return;
+            }
+            else
+            {
+                ResourcesManager.Instance._manaCount -= _cardSelected._cardManaCost;
             }
 
             DrawLines.Instance.HideLine();
@@ -76,6 +107,9 @@ namespace SB
         }
         public void DrawGardenCard()
         {
+            if(GardenDeckManager.Instance._deck.Count == 0)
+                CompostManager.Instance.ReloadDeckFromCompost();
+
             if(GardenDeckManager.Instance._deck.Count >= 1)
             {
                 Card randCard = GardenDeckManager.Instance._deck[Random.Range(0,GardenDeckManager.Instance._deck.Count)];
@@ -86,12 +120,12 @@ namespace SB
                         CardSlot cardSlot = _cardSlots[i];
 
                         GardenDeckManager.Instance._deck.Remove(randCard);
-                        
-                        var newCard = Instantiate(randCard,cardSlot.transform.position, Quaternion.identity);
-                        cardSlot.AddCard(newCard);
 
-                        _hand.Add(newCard);
+                        randCard.transform.position = cardSlot.transform.position;
+                        cardSlot.AddCard(randCard);
+                        _hand.Add(randCard);
 
+                        randCard.gameObject.SetActive(true);
                         return;
                     }
                 }
@@ -99,6 +133,9 @@ namespace SB
         }
         public void DrawSpellCard()
         {
+            if(SpellDeckManager.Instance._deck.Count == 0)
+                SpellHistoryManager.Instance.ReloadDeckSpellHistory();
+
             if(SpellDeckManager.Instance._deck.Count >= 1)
             {
                 Card randCard = SpellDeckManager.Instance._deck[Random.Range(0,SpellDeckManager.Instance._deck.Count)];
@@ -110,11 +147,12 @@ namespace SB
 
                         SpellDeckManager.Instance._deck.Remove(randCard);
                         
-                        var newCard = Instantiate(randCard,cardSlot.transform.position, Quaternion.identity);
-                        cardSlot.AddCard(newCard);
+                        randCard.transform.position = cardSlot.transform.position;
+                        cardSlot.AddCard(randCard);
 
-                        _hand.Add(newCard);
+                        _hand.Add(randCard);
 
+                        randCard.gameObject.SetActive(true);
                         return;
                     }
                 }
@@ -133,14 +171,8 @@ namespace SB
                 }
                 _hand.Remove(_cardSelected);
 
-                if(_cardSelected._cardType == CardType.Garden)
-                {
-                    _cardSelected.transform.position = CompostManager.Instance.GetCompostTransform().position;
-                }
-                else if(_cardSelected._cardType == CardType.Spell)
-                {
-                    _cardSelected.transform.position = SpellHistoryManager.Instance.GetSpellHistoryTransform().position;
-                }
+                MoveToDiscard(_cardSelected);
+
                 _cardSelected.UnSelectCard();
                 _cardSelected = null;
             }
@@ -154,14 +186,8 @@ namespace SB
                     Card card = _cardSlots[i]._storedCard;
                     _hand.Remove(card);
                     
-                    if(card._cardType == CardType.Garden)
-                    {
-                        card.transform.position = CompostManager.Instance.GetCompostTransform().position;
-                    }
-                    else if(card._cardType == CardType.Spell)
-                    {
-                        card.transform.position = SpellHistoryManager.Instance.GetSpellHistoryTransform().position;
-                    }
+                    MoveToDiscard(card);
+                    
                     if(card==_cardSelected)
                     {
                         _cardSelected.UnSelectCard();
@@ -169,6 +195,19 @@ namespace SB
                     }
                     _cardSlots[i].RemoveCard();
                 }
+            }
+        }
+        private void MoveToDiscard(Card card)
+        {
+            if(card._cardType == CardType.Garden)
+            {
+                card.transform.position = CompostManager.Instance.GetCompostTransform().position;
+                CompostManager.Instance.AddToCompost(card);
+            }
+            else if(card._cardType == CardType.Spell)
+            {
+                card.transform.position = SpellHistoryManager.Instance.GetSpellHistoryTransform().position;
+                SpellHistoryManager.Instance.AddToSpellHistory(card);
             }
         }
     }

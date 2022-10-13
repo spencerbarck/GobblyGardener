@@ -25,6 +25,7 @@ namespace SB
         [SerializeField] public string _cardRulesText;
         [SerializeField] public int _foodYeild;
         [SerializeField] public int _flowerYeild;
+        [SerializeField] public int _manaYeild;
 
         
         [SerializeField] private Color _dryColor;
@@ -34,7 +35,7 @@ namespace SB
         private bool _isWatered;
         private float _cardZValue = -0.001f;
         public CardType _cardType;
-        public Tile _cardTile;
+        [HideInInspector] public Tile _cardTile;
         private void Start()
         {
             _cardBaseImage.SetActive(false);
@@ -137,6 +138,7 @@ namespace SB
                 {
                     ResourcesManager.Instance._flowerCount += _flowerYeild;
                     ResourcesManager.Instance._foodCount += _foodYeild;
+                    ResourcesManager.Instance._manaCount += _manaYeild;
                 }
             }
             
