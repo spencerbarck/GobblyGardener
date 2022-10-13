@@ -1017,6 +1017,15 @@ MonoBehaviour:
   _deck:
   - {fileID: 1960110644893261061, guid: 4b47ebecf00c31342830fdecf34a7949, type: 3}
   - {fileID: 1960110644893261061, guid: 0e46b46829aa1dc4e9321a0b6226f5a5, type: 3}
+  - {fileID: 1960110644893261061, guid: c119cafc7a23ed44990f3dceed04ba9d, type: 3}
+  - {fileID: 1960110644893261061, guid: 66b86d676c5e48242ab6b5928134c71a, type: 3}
+  - {fileID: 1960110644893261061, guid: 6e2f0d88a5b38424aa621898f168f348, type: 3}
+  - {fileID: 1960110644893261061, guid: ff371c1a7c768864192bade218adae45, type: 3}
+  - {fileID: 1960110644893261061, guid: c119cafc7a23ed44990f3dceed04ba9d, type: 3}
+  - {fileID: 1960110644893261061, guid: c119cafc7a23ed44990f3dceed04ba9d, type: 3}
+  - {fileID: 1960110644893261061, guid: 4b47ebecf00c31342830fdecf34a7949, type: 3}
+  - {fileID: 1960110644893261061, guid: 0e46b46829aa1dc4e9321a0b6226f5a5, type: 3}
+  - {fileID: 1960110644893261061, guid: 0e46b46829aa1dc4e9321a0b6226f5a5, type: 3}
 --- !u!1 &417884982
 GameObject:
   m_ObjectHideFlags: 0
@@ -2379,6 +2388,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _deck:
+  - {fileID: 1960110644893261061, guid: 82e842cdc697c5e46b5a5c2875d3000e, type: 3}
+  - {fileID: 1960110644893261061, guid: 82e842cdc697c5e46b5a5c2875d3000e, type: 3}
+  - {fileID: 1960110644893261061, guid: 82e842cdc697c5e46b5a5c2875d3000e, type: 3}
+  - {fileID: 1960110644893261061, guid: 82e842cdc697c5e46b5a5c2875d3000e, type: 3}
+  - {fileID: 1960110644893261061, guid: 82e842cdc697c5e46b5a5c2875d3000e, type: 3}
+  - {fileID: 1960110644893261061, guid: 82e842cdc697c5e46b5a5c2875d3000e, type: 3}
+  - {fileID: 1960110644893261061, guid: 82e842cdc697c5e46b5a5c2875d3000e, type: 3}
+  - {fileID: 1960110644893261061, guid: 82e842cdc697c5e46b5a5c2875d3000e, type: 3}
   - {fileID: 1960110644893261061, guid: 82e842cdc697c5e46b5a5c2875d3000e, type: 3}
   - {fileID: 1960110644893261061, guid: 82e842cdc697c5e46b5a5c2875d3000e, type: 3}
   - {fileID: 1960110644893261061, guid: 82e842cdc697c5e46b5a5c2875d3000e, type: 3}
