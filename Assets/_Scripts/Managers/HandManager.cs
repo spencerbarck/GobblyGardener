@@ -99,7 +99,8 @@ namespace SB
             else if(_cardSelected._cardType == CardType.Spell)
             {
                 tile.WaterCardOnTile();
-                _cardSelected.transform.position = SpellHistoryManager.Instance.GetSpellHistoryTransform().position;
+                MoveToDiscard(_cardSelected);
+                //_cardSelected.transform.position = SpellHistoryManager.Instance.GetSpellHistoryTransform().position;
             }
 
             _cardSelected.UnSelectCard();
