@@ -133,6 +133,9 @@ namespace SB
         }
         public void DrawSpellCard()
         {
+            if(TurnsManager.Instance.GetCurrentTurnType()=="Planting")
+                return;
+
             if(SpellDeckManager.Instance._deck.Count == 0)
                 SpellHistoryManager.Instance.ReloadDeckSpellHistory();
 
