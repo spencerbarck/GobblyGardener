@@ -9,18 +9,18 @@ namespace SB
         [SerializeField] private Color _baseColor, _offsetColor;
         [SerializeField] private SpriteRenderer _renderer;
         [SerializeField] private GameObject _highlight;
-        private GridManager _gridManager;
         public bool _hasCard;
-        public float _tileValue;
         private Card _tileCard;
+        public int _tileX;
+        public int _tileY;
         private void Start()
         {
-            _gridManager = FindObjectOfType<GridManager>();
-            _tileValue = 222f;
         }
-        public void Init(bool isOffset)
+        public void Init(bool isOffset,int tileX,int tileY)
         {
             _renderer.color = isOffset ? _offsetColor : _baseColor;
+            _tileX=tileX;
+            _tileY=tileY;
         }
 
         public SpriteRenderer GetSpriteRenderer()
@@ -29,34 +29,37 @@ namespace SB
         }
         private void OnMouseEnter()
         {
-            HightlightTile();
-            _gridManager.FocusTile(this);
+            TileSelectionManager.Instance.SelectTile(GridManager.Instance._tileDictionary[new Vector2(_tileX,_tileY+1)]);
+            TileSelectionManager.Instance.SelectTile(GridManager.Instance._tileDictionary[new Vector2(_tileX,_tileY-1)]);
+            TileSelectionManager.Instance.SelectTile(this);
         }
         private void OnMouseExit()
         {
-            UnhightlightTile();
-            _gridManager.UnFocusTile();
+            TileSelectionManager.Instance.UnselectTiles();
         }
-        private void HightlightTile()
+        public void HightlightTile()
         {
             _highlight.SetActive(true);
         }
-        private void UnhightlightTile()
+        public void UnhightlightTile()
         {
             _highlight.SetActive(false);
         }
         private void OnMouseDown()
         {
-            if((HandManager.Instance._cardSelected!=null))
+            foreach(Tile tile in TileSelectionManager.Instance._tilesSlected)
             {
-                if(HandManager.Instance._cardSelected._cardType == CardType.Spell)
+                if((HandManager.Instance._cardSelected!=null))
                 {
-                    HandManager.Instance.PlaceCardSelected(this);
-                } 
-                else if(HandManager.Instance._cardSelected._cardType == CardType.Garden)
-                {
-                    if(!_hasCard)
-                        HandManager.Instance.PlaceCardSelected(this);
+                    if(HandManager.Instance._cardSelected._cardType == CardType.Spell)
+                    {
+                        HandManager.Instance.PlaceCardSelected(tile);
+                    } 
+                    else if(HandManager.Instance._cardSelected._cardType == CardType.Garden)
+                    {
+                        if(!_hasCard)
+                            HandManager.Instance.PlaceCardSelected(tile);
+                    }
                 }
             }
         }

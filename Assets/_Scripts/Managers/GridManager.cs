@@ -13,7 +13,6 @@ namespace SB
         [SerializeField] private float _startXPos, _startYPos, _xTileShift, _yTileShift;
         [SerializeField] private Tile _tilePrefab;
         public Dictionary<Vector2, Tile> _tileDictionary;
-        public Tile _tileInFocus;
         private void Awake()
         {
             Instance = this;
@@ -22,7 +21,6 @@ namespace SB
         {
             GenerateGrid();
         }
-
         private void GenerateGrid()
         {
             _tileDictionary = new Dictionary<Vector2, Tile>();
@@ -35,7 +33,7 @@ namespace SB
                     spawnedTile.name = $"Tile {y} {x}";
 
                     var isOffset = (x % 2 == 0 && y % 2 != 0)||(x % 2 != 0 && y % 2 == 0);
-                    spawnedTile.Init(isOffset);
+                    spawnedTile.Init(isOffset,x,y);
                     tilePosition.y += _yTileShift;
 
                     _tileDictionary[new Vector2(x,y)] = spawnedTile;
@@ -51,14 +49,6 @@ namespace SB
                 return Tile;
             }
             return null;
-        }
-        public void FocusTile(Tile tile)
-        {
-            _tileInFocus = tile;
-        }
-        public void UnFocusTile()
-        {
-            _tileInFocus = null;
         }
         public void HarvestGarden()
         {

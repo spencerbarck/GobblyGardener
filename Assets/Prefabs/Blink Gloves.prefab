@@ -580,7 +580,7 @@ MonoBehaviour:
   _cardImage: {fileID: 1094143204839780389}
   _growthCostText: {fileID: 1786865431298539144}
   _rulesText: {fileID: 440065201732434537}
-  _cardName: Water Blast
+  _cardName: Blink Gloves
   _cardManaCost: 0
   _cardSprite: {fileID: 21300000, guid: 0e137a0ce61d689479579b4ce44d8e0b, type: 3}
   _cardGrowthCost: 0

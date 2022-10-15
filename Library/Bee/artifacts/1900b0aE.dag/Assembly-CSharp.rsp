@@ -408,6 +408,7 @@
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexShakeB.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexZoom.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/WarpTextExample.cs"
+"Assets/TileSelectionManager.cs"
 "Assets/_Scripts/Card.cs"
 "Assets/_Scripts/CardSlot.cs"
 "Assets/_Scripts/Managers/CompostManager.cs"

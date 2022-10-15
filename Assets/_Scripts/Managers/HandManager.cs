@@ -100,7 +100,6 @@ namespace SB
             {
                 tile.WaterCardOnTile();
                 MoveToDiscard(_cardSelected);
-                //_cardSelected.transform.position = SpellHistoryManager.Instance.GetSpellHistoryTransform().position;
             }
 
             _cardSelected.UnSelectCard();

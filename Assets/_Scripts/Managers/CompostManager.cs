@@ -15,14 +15,12 @@ namespace SB
             Instance = this;
         }
         public Transform GetCompostTransform(){ return _compostTransform;}
-
         public void AddToCompost(Card card)
         {
             if(_topOfCompost != null)_topOfCompost.gameObject.SetActive(false);
             _topOfCompost=card;
             _compostList.Add(card);
         }
-
         public void ReloadDeckFromCompost()
         {
             if(_topOfCompost != null)_topOfCompost.gameObject.SetActive(false);
