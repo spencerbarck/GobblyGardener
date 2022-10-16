@@ -26,6 +26,7 @@ namespace SB
         }
         public void EndTurn()
         {
+            DrawLines.Instance.HideLine();
             if(_currentTurnType=="Planting")
             {
                 _currentTurnType = "Growing";

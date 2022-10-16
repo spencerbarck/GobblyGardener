@@ -13,8 +13,18 @@ namespace SB
         private Card _tileCard;
         public int _tileX;
         public int _tileY;
-        private void Start()
+        private bool _isHover;
+        private void Update()
         {
+            if(_isHover)
+            {
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    OnMouseEnter();
+                    OnMouseExit();
+                    OnMouseEnter();
+                }
+            }
         }
         public void Init(bool isOffset,int tileX,int tileY)
         {
@@ -22,19 +32,31 @@ namespace SB
             _tileX=tileX;
             _tileY=tileY;
         }
-
         public SpriteRenderer GetSpriteRenderer()
         {
             return _renderer;
         }
         private void OnMouseEnter()
         {
-            TileSelectionManager.Instance.SelectTile(GridManager.Instance._tileDictionary[new Vector2(_tileX,_tileY+1)]);
-            TileSelectionManager.Instance.SelectTile(GridManager.Instance._tileDictionary[new Vector2(_tileX,_tileY-1)]);
-            TileSelectionManager.Instance.SelectTile(this);
+            _isHover=true;
+            if(TileSelectionManager.Instance._isHorizontal)
+            {
+                for(int x = 0; x<GridManager.Instance._width; x++)
+                {
+                    TileSelectionManager.Instance.SelectTile(GridManager.Instance._tileDictionary[new Vector2(x,_tileY)]);
+                }
+            }
+            else
+            {
+                for(int y = 0; y<GridManager.Instance._height; y++)
+                {
+                    TileSelectionManager.Instance.SelectTile(GridManager.Instance._tileDictionary[new Vector2(_tileX,y)]);
+                }
+            }
         }
         private void OnMouseExit()
         {
+            _isHover=false;
             TileSelectionManager.Instance.UnselectTiles();
         }
         public void HightlightTile()
@@ -47,18 +69,23 @@ namespace SB
         }
         private void OnMouseDown()
         {
+            if(HandManager.Instance._cardSelected==null)
+                return;
+
+            Card cardSelected = HandManager.Instance._cardSelected;
             foreach(Tile tile in TileSelectionManager.Instance._tilesSlected)
             {
-                if((HandManager.Instance._cardSelected!=null))
+                if(cardSelected._cardType == CardType.Spell)
                 {
-                    if(HandManager.Instance._cardSelected._cardType == CardType.Spell)
+                    HandManager.Instance.PlaceCardSelected(tile);
+                    HandManager.Instance.SelectSingleCard(cardSelected);
+                } 
+                else if(cardSelected._cardType == CardType.Garden)
+                {
+                    if(!_hasCard)
                     {
                         HandManager.Instance.PlaceCardSelected(tile);
-                    } 
-                    else if(HandManager.Instance._cardSelected._cardType == CardType.Garden)
-                    {
-                        if(!_hasCard)
-                            HandManager.Instance.PlaceCardSelected(tile);
+                        HandManager.Instance.SelectSingleCard(cardSelected);
                     }
                 }
             }

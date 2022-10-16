@@ -70,7 +70,6 @@ namespace SB
             {
                 return;
             }
-
             if(_cardSelected._cardManaCost>ResourcesManager.Instance._manaCount)
             {
                 return;
@@ -79,7 +78,6 @@ namespace SB
             {
                 ResourcesManager.Instance._manaCount -= _cardSelected._cardManaCost;
             }
-
             DrawLines.Instance.HideLine();
             foreach(CardSlot cardSlot in _cardSlots)
             {
@@ -101,7 +99,6 @@ namespace SB
                 tile.WaterCardOnTile();
                 MoveToDiscard(_cardSelected);
             }
-
             _cardSelected.UnSelectCard();
             _cardSelected = null;
         }
