@@ -13,14 +13,13 @@ namespace SB
         private Card _tileCard;
         public int _tileX;
         public int _tileY;
-        private bool _isHover;
+        public bool _isHover;
         private void Update()
         {
             if(_isHover)
             {
                 if (Input.GetKeyDown(KeyCode.R))
                 {
-                    OnMouseEnter();
                     OnMouseExit();
                     OnMouseEnter();
                 }
@@ -39,20 +38,7 @@ namespace SB
         private void OnMouseEnter()
         {
             _isHover=true;
-            if(TileSelectionManager.Instance._isHorizontal)
-            {
-                for(int x = 0; x<GridManager.Instance._width; x++)
-                {
-                    TileSelectionManager.Instance.SelectTile(GridManager.Instance._tileDictionary[new Vector2(x,_tileY)]);
-                }
-            }
-            else
-            {
-                for(int y = 0; y<GridManager.Instance._height; y++)
-                {
-                    TileSelectionManager.Instance.SelectTile(GridManager.Instance._tileDictionary[new Vector2(_tileX,y)]);
-                }
-            }
+            TileSelectionManager.Instance.SelectMultipleTiles(_tileX,_tileY);
         }
         private void OnMouseExit()
         {
@@ -71,24 +57,8 @@ namespace SB
         {
             if(HandManager.Instance._cardSelected==null)
                 return;
-
-            Card cardSelected = HandManager.Instance._cardSelected;
-            foreach(Tile tile in TileSelectionManager.Instance._tilesSlected)
-            {
-                if(cardSelected._cardType == CardType.Spell)
-                {
-                    HandManager.Instance.PlaceCardSelected(tile);
-                    HandManager.Instance.SelectSingleCard(cardSelected);
-                } 
-                else if(cardSelected._cardType == CardType.Garden)
-                {
-                    if(!_hasCard)
-                    {
-                        HandManager.Instance.PlaceCardSelected(tile);
-                        HandManager.Instance.SelectSingleCard(cardSelected);
-                    }
-                }
-            }
+            
+            HandManager.Instance.PlaceCardSelectedInSelectedTiles();
         }
         public void SetTileCard(Card card)
         {

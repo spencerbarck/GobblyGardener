@@ -17,30 +17,11 @@ namespace SB
         }
         private void Start()
         {       
-            InstantiateAllCards();    
             GardenDeckManager.Instance.ShuffleDeck();
+            SpellDeckManager.Instance.ShuffleDeck();
             GenerateHand("Garden");
         }
-        private void InstantiateAllCards()
-        {
-            List<Card> tempGardenDeck = new List<Card>();
-            foreach(Card card in GardenDeckManager.Instance._deck)
-            {
-                var newCard = Instantiate(card,new Vector2(0,0), Quaternion.identity);
-                newCard.gameObject.SetActive(false);
-                tempGardenDeck.Add(newCard);
-            }
-            GardenDeckManager.Instance._deck=tempGardenDeck;
-
-            List<Card> tempSpellDeck = new List<Card>();
-            foreach(Card card in SpellDeckManager.Instance._deck)
-            {
-                var newCard = Instantiate(card,new Vector2(0,0), Quaternion.identity);
-                newCard.gameObject.SetActive(false);
-                tempSpellDeck.Add(newCard);
-            }
-            SpellDeckManager.Instance._deck=tempSpellDeck;
-        }
+        
         public void GenerateHand(string cardType)
         {
             for(int i = 0; i<_cardSlots.Count ; i++)
@@ -60,25 +41,13 @@ namespace SB
                 if(_cardSelected != null)
                     _cardSelected.UnSelectCard();
 
-                _cardSelected = card;
-                _cardSelected.SelectCard();
+                _cardSelected = card.SelectCard();
             }
         }
         public void PlaceCardSelected(Tile tile)
         {
-            if((_cardSelected._cardType == CardType.Spell)&&(!tile._hasCard))
-            {
-                return;
-            }
-            if(_cardSelected._cardManaCost>ResourcesManager.Instance._manaCount)
-            {
-                return;
-            }
-            else
-            {
-                ResourcesManager.Instance._manaCount -= _cardSelected._cardManaCost;
-            }
             DrawLines.Instance.HideLine();
+
             foreach(CardSlot cardSlot in _cardSlots)
             {
                 if(cardSlot._storedCard == _cardSelected)
@@ -97,10 +66,38 @@ namespace SB
             else if(_cardSelected._cardType == CardType.Spell)
             {
                 tile.WaterCardOnTile();
-                MoveToDiscard(_cardSelected);
             }
+
             _cardSelected.UnSelectCard();
             _cardSelected = null;
+
+            TileSelectionManager.Instance._tileSelectionType = TileSelectionType.OneXOne;
+        }
+        public void PlaceCardSelectedInSelectedTiles()
+        {
+            Card cardSelected = _cardSelected;
+            if(ResourcesManager.Instance.CheckSpendMana(cardSelected._cardManaCost)==false)
+            {
+                return;
+            }
+            foreach(Tile tile in TileSelectionManager.Instance._tilesSlected)
+            {
+                if(cardSelected._cardType == CardType.Spell)
+                {
+                    HandManager.Instance.PlaceCardSelected(tile);
+                    HandManager.Instance._cardSelected=cardSelected;
+                }
+                else if(cardSelected._cardType == CardType.Garden)
+                {
+                    if(!tile._hasCard)
+                    {
+                        HandManager.Instance.PlaceCardSelected(tile);
+                        HandManager.Instance._cardSelected=cardSelected;
+                    }
+                }
+            }
+            if(cardSelected._cardType == CardType.Spell)
+                HandManager.Instance.MoveToDiscard(cardSelected);
         }
         public void DrawGardenCard()
         {
@@ -197,7 +194,7 @@ namespace SB
                 }
             }
         }
-        private void MoveToDiscard(Card card)
+        public void MoveToDiscard(Card card)
         {
             if(card._cardType == CardType.Garden)
             {

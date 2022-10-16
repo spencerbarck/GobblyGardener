@@ -570,27 +570,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840a2fb15da615447a44c62412dee3ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cardBackSpriteRenderer: {fileID: 3652784755321740072}
-  _highlight: {fileID: 4046226622406558708}
+  _cardType: 1
+  _cardTileSelectionType: 3
   _cardCanvas: {fileID: 2419358328195788659}
-  _cardBaseImage: {fileID: 3424350679945073107}
-  _cardHighlightImage: {fileID: 2681291910338739265}
   _nameText: {fileID: 4054097244383346193}
   _manaCostText: {fileID: 517001538570171978}
   _cardImage: {fileID: 1094143204839780389}
   _growthCostText: {fileID: 1786865431298539144}
   _rulesText: {fileID: 440065201732434537}
-  _cardName: Gobbly Water Can
-  _cardManaCost: 1
-  _cardSprite: {fileID: 21300000, guid: 4f5f0b0888737b64cbe5393c1eb12ed6, type: 3}
-  _cardGrowthCost: 0
   _cardRulesText: Water 2x2
+  _cardManaCost: 1
+  _cardGrowthCost: 0
   _foodYeild: 0
   _flowerYeild: 0
   _manaYeild: 0
   _dryColor: {r: 0.39215687, g: 0.25912407, b: 0.49019608, a: 1}
   _wateredColor: {r: 0, g: 0, b: 0, a: 0}
-  _cardType: 1
+  _cardName: Gobbly Water Can
+  _cardSprite: {fileID: 21300000, guid: 4f5f0b0888737b64cbe5393c1eb12ed6, type: 3}
+  _cardBaseImage: {fileID: 3424350679945073107}
+  _cardHighlightImage: {fileID: 2681291910338739265}
+  _cardBackSpriteRenderer: {fileID: 3652784755321740072}
+  _highlight: {fileID: 4046226622406558708}
   _cardTile: {fileID: 0}
 --- !u!61 &8306015245685303153
 BoxCollider2D:

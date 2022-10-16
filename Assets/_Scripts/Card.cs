@@ -8,33 +8,36 @@ namespace SB
 {
     public class Card : MonoBehaviour
     {
-        [SerializeField] private SpriteRenderer _cardBackSpriteRenderer;
-        [SerializeField] private GameObject _highlight;
+        public CardType _cardType;
+        public TileSelectionType _cardTileSelectionType;
+        [Header("UI Settings")]
         [SerializeField] private Canvas _cardCanvas;
-        [SerializeField] private GameObject _cardBaseImage;
-        [SerializeField] private GameObject _cardHighlightImage;
         [SerializeField] private TextMeshProUGUI _nameText;
         [SerializeField] private TextMeshProUGUI _manaCostText;
         [SerializeField] private Image _cardImage;
         [SerializeField] private TextMeshProUGUI _growthCostText;
         [SerializeField] private TextMeshProUGUI _rulesText;
-        [SerializeField] public string _cardName;
-        [SerializeField] public int _cardManaCost;
-        [SerializeField] public Sprite _cardSprite;
-        [SerializeField] public int _cardGrowthCost;
         [SerializeField] public string _cardRulesText;
+        [Header("Resource Settings")]
+        [SerializeField] public int _cardManaCost;
+        [SerializeField] public int _cardGrowthCost;
         [SerializeField] public int _foodYeild;
         [SerializeField] public int _flowerYeild;
         [SerializeField] public int _manaYeild;
 
-        
+        [Header("Appearance Settings")]
         [SerializeField] private Color _dryColor;
         [SerializeField] private Color _wateredColor;
+        [SerializeField] public string _cardName;
+        [SerializeField] public Sprite _cardSprite;
+        [SerializeField] private GameObject _cardBaseImage;
+        [SerializeField] private GameObject _cardHighlightImage;
+        [SerializeField] private SpriteRenderer _cardBackSpriteRenderer;
+        [SerializeField] private GameObject _highlight;
         private bool _isSelected;
         private bool _isEnlarged;
         private bool _isWatered;
         private float _cardZValue = -0.001f;
-        public CardType _cardType;
         [HideInInspector] public Tile _cardTile;
         private void Start()
         {
@@ -62,13 +65,15 @@ namespace SB
         }
         private void OnMouseDown()
         {
+            //Used if card is in the garden
             if((HandManager.Instance._cardSelected!=null)&&(HandManager.Instance._cardSelected._cardType == CardType.Spell))
             {
                 if(_cardTile != null)
                 {
-                    HandManager.Instance.PlaceCardSelected(_cardTile);
+                    HandManager.Instance.PlaceCardSelectedInSelectedTiles();
                 }
             }
+            //Used if card is in the hand
             if(!_isSelected)
                 HandManager.Instance.SelectSingleCard(this);
         }
@@ -76,17 +81,29 @@ namespace SB
         {
             HighlightCard();
             EnlargeCard();
+            if(_cardTile!=null)
+            {
+                _cardTile._isHover=true;
+                TileSelectionManager.Instance.SelectMultipleTiles(_cardTile._tileX,_cardTile._tileY);
+            }
         }
         private void OnMouseExit()
         {
             if(!_isSelected)
                 UnhighlightCard();
             UnenlargeCard();
+            if(_cardTile!=null)
+            {
+                _cardTile._isHover=false;
+                TileSelectionManager.Instance.UnselectTiles();
+            }
         }
-        public void SelectCard()
+        public Card SelectCard()
         {
+            TileSelectionManager.Instance._tileSelectionType = _cardTileSelectionType;
             _isSelected = true;
             HighlightCard();
+            return this;
         }
         public void UnSelectCard()
         {
@@ -125,6 +142,12 @@ namespace SB
             _cardBackSpriteRenderer.color = _wateredColor;
             _cardBaseImage.GetComponent<Image>().color = _wateredColor;
         }
+        private void DryCard()
+        {
+            _isWatered = false;
+            _cardBackSpriteRenderer.color = _dryColor;
+            _cardBaseImage.GetComponent<Image>().color = _dryColor;
+        }
         public void HarvestCard()
         {
             if(_isWatered)
@@ -141,10 +164,7 @@ namespace SB
                     ResourcesManager.Instance._manaCount += _manaYeild;
                 }
             }
-            
-            _isWatered = false;
-            _cardBackSpriteRenderer.color = _dryColor;
-            _cardBaseImage.GetComponent<Image>().color = _dryColor;
+            DryCard();
         }
     }
 }

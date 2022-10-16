@@ -7,18 +7,16 @@ namespace SB
     public class TileSelectionManager : MonoBehaviour
     {
         public static TileSelectionManager Instance;
-        public int _selectX;
-        public int _selectY;
         public List<Tile> _tilesSlected= new List<Tile>();
         public bool _isHorizontal;
+        public TileSelectionType _tileSelectionType;
         private void Awake()
         {
             Instance = this;
         }
         private void Start()
         {
-            _selectX = 1;
-            _selectY = 1;
+            _tileSelectionType = TileSelectionType.OneXOne;
         }
         private void Update()
         {
@@ -27,15 +25,114 @@ namespace SB
                 _isHorizontal=!_isHorizontal;
             }
         }
-        public void RotateSelection()
+        public void SelectMultipleTiles(int tileX, int tileY)
         {
-            if(((_selectX==1)&&(_selectY==3))||((_selectX==3)&&(_selectY==1)))
+            switch(_tileSelectionType)
             {
-                _selectX=_selectY;
-                _selectY=_selectX;
+                case TileSelectionType.OneXOne:
+                {
+                    SelectTile(GridManager.Instance._tileDictionary[new Vector2(tileX,tileY)]);
+                    break;
+                }
+                case TileSelectionType.TwoXOne:
+                {
+                    SelectTwoXOne(tileX,tileY);
+                    break;
+                }
+                case TileSelectionType.ThreeXOne:
+                {
+                    SelectThreeXOne(tileX,tileY);
+                    break;
+                }
+                case TileSelectionType.TwoXTwo:
+                {
+                    SelectTwoXTwo(tileX,tileY);
+                    break;
+                }
+                case TileSelectionType.ThreeXThree:
+                {
+                    SelectThreeXThree();
+                    break;
+                }
+                default: break;
+            }
+            
+        }
+        private void SelectTwoXOne(int tileX, int tileY)
+        {
+            if(_isHorizontal)
+            {
+                SelectTile(GridManager.Instance._tileDictionary[new Vector2(tileX,tileY)]);
+                if(GridManager.Instance._tileDictionary.ContainsKey(new Vector2(tileX+1,tileY)))
+                    SelectTile(GridManager.Instance._tileDictionary[new Vector2(tileX+1,tileY)]);
+                else
+                    SelectTile(GridManager.Instance._tileDictionary[new Vector2(tileX-1,tileY)]);
+            }
+            else
+            {
+                SelectTile(GridManager.Instance._tileDictionary[new Vector2(tileX,tileY)]);
+                if(GridManager.Instance._tileDictionary.ContainsKey(new Vector2(tileX,tileY+1)))
+                    SelectTile(GridManager.Instance._tileDictionary[new Vector2(tileX,tileY+1)]);
+                else
+                    SelectTile(GridManager.Instance._tileDictionary[new Vector2(tileX,tileY-1)]);
             }
         }
-        public void SelectTile(Tile tile)
+        private void SelectThreeXOne(int tileX, int tileY)
+        {
+            if(_isHorizontal)
+            {
+                for(int x = 0; x<GridManager.Instance._width; x++)
+                {
+                    SelectTile(GridManager.Instance._tileDictionary[new Vector2(x,tileY)]);
+                }
+            }
+            else
+            {
+                for(int y = 0; y<GridManager.Instance._height; y++)
+                {
+                    SelectTile(GridManager.Instance._tileDictionary[new Vector2(tileX,y)]);
+                }
+            }
+        }
+        private void SelectTwoXTwo(int tileX, int tileY)
+        {
+            SelectTile(GridManager.Instance._tileDictionary[new Vector2(tileX,tileY)]);
+            int x;
+            int y;
+            if(GridManager.Instance._tileDictionary.ContainsKey(new Vector2(tileX+1,tileY)))
+            {
+                SelectTile(GridManager.Instance._tileDictionary[new Vector2(tileX+1,tileY)]);
+                x=1;
+            }
+            else
+            {
+                SelectTile(GridManager.Instance._tileDictionary[new Vector2(tileX-1,tileY)]);
+                x=-1;
+            }
+
+            if(GridManager.Instance._tileDictionary.ContainsKey(new Vector2(tileX,tileY+1)))
+            {
+                SelectTile(GridManager.Instance._tileDictionary[new Vector2(tileX,tileY+1)]);
+                y=1;
+            }
+            else
+            {
+                SelectTile(GridManager.Instance._tileDictionary[new Vector2(tileX,tileY-1)]);
+                y=-1;
+            }
+            SelectTile(GridManager.Instance._tileDictionary[new Vector2(tileX+x,tileY+y)]);
+        }
+        private void SelectThreeXThree()
+        {
+            for(int x = 0; x<GridManager.Instance._width; x++)
+            {
+                for(int y = 0; y<GridManager.Instance._height; y++)
+                {
+                    SelectTile(GridManager.Instance._tileDictionary[new Vector2(x,y)]);
+                }
+            }
+        }
+        private void SelectTile(Tile tile)
         {
             _tilesSlected.Add(tile);
             tile.HightlightTile();
@@ -47,4 +144,12 @@ namespace SB
             _tilesSlected.Clear();
         }
     }
+}
+public enum TileSelectionType 
+{
+  OneXOne,
+  TwoXOne,
+  ThreeXOne,
+  TwoXTwo,
+  ThreeXThree
 }

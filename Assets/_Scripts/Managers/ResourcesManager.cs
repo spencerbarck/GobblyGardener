@@ -14,5 +14,17 @@ namespace SB
         {
             Instance = this;
         }
+        public bool CheckSpendMana(int manaCost)
+        {
+            if(manaCost>_manaCount)
+            {
+                return false;
+            }
+            else
+            {
+                _manaCount-=manaCost;
+                return true;
+            }
+        }
     }
 }
