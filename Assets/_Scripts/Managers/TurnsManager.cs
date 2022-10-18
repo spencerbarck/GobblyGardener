@@ -33,6 +33,7 @@ namespace SB
             }
             else if(_currentTurnType=="Growing")
             {
+                ResourcesManager.Instance._manaCount=0;
                 GridManager.Instance.HarvestGarden();
             }
             _currentTurn++;

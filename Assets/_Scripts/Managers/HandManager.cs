@@ -63,10 +63,7 @@ namespace SB
                 _cardSelected._cardTile = tile;
                 _cardSelected.transform.position = tile.transform.position;
             }
-            else if(_cardSelected._cardType == CardType.Spell)
-            {
-                tile.WaterCardOnTile();
-            }
+            _cardSelected.OnPlacement(tile);
 
             _cardSelected.UnSelectCard();
             _cardSelected = null;
@@ -80,6 +77,7 @@ namespace SB
             {
                 return;
             }
+
             foreach(Tile tile in TileSelectionManager.Instance._tilesSlected)
             {
                 if(cardSelected._cardType == CardType.Spell)
@@ -96,6 +94,7 @@ namespace SB
                     }
                 }
             }
+            cardSelected.OnPlay();
             if(cardSelected._cardType == CardType.Spell)
                 HandManager.Instance.MoveToDiscard(cardSelected);
         }

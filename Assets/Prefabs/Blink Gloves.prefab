@@ -173,6 +173,7 @@ RectTransform:
   - {fileID: 5365647365187357710}
   - {fileID: 5026975755045246240}
   - {fileID: 712894880151248375}
+  - {fileID: 3317714575606456380}
   m_Father: {fileID: 3652784755321740074}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -570,27 +571,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840a2fb15da615447a44c62412dee3ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cardBackSpriteRenderer: {fileID: 3652784755321740072}
-  _highlight: {fileID: 4046226622406558708}
+  _cardType: 1
+  _cardTileSelectionType: 0
   _cardCanvas: {fileID: 2419358328195788659}
-  _cardBaseImage: {fileID: 3424350679945073107}
-  _cardHighlightImage: {fileID: 2681291910338739265}
   _nameText: {fileID: 4054097244383346193}
   _manaCostText: {fileID: 517001538570171978}
   _cardImage: {fileID: 1094143204839780389}
   _growthCostText: {fileID: 1786865431298539144}
   _rulesText: {fileID: 440065201732434537}
-  _cardName: Blink Gloves
+  _cardWitherImage: {fileID: 7501800698543004546}
   _cardManaCost: 0
-  _cardSprite: {fileID: 21300000, guid: 0e137a0ce61d689479579b4ce44d8e0b, type: 3}
   _cardGrowthCost: 0
-  _cardRulesText: Move a Garden Card to anywhere else in the Garden
   _foodYeild: 0
   _flowerYeild: 0
   _manaYeild: 0
   _dryColor: {r: 0.39215687, g: 0.25912407, b: 0.49019608, a: 1}
   _wateredColor: {r: 0, g: 0, b: 0, a: 0}
-  _cardType: 1
+  _cardName: Blink Gloves
+  _cardRulesText: Move a Garden Card to anywhere else in the Garden
+  _cardSprite: {fileID: 21300000, guid: 0e137a0ce61d689479579b4ce44d8e0b, type: 3}
+  _cardBaseImage: {fileID: 3424350679945073107}
+  _cardHighlightImage: {fileID: 2681291910338739265}
+  _cardBackSpriteRenderer: {fileID: 3652784755321740072}
+  _highlight: {fileID: 4046226622406558708}
   _cardTile: {fileID: 0}
 --- !u!61 &8306015245685303153
 BoxCollider2D:
@@ -1107,3 +1110,156 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &8866611459387207032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4871707964481659963}
+  - component: {fileID: 1120283283161231953}
+  - component: {fileID: 8746150112217582875}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4871707964481659963
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8866611459387207032}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3317714575606456380}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1120283283161231953
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8866611459387207032}
+  m_CullTransparentMesh: 1
+--- !u!114 &8746150112217582875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8866611459387207032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &8948611104600755800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3317714575606456380}
+  - component: {fileID: 1969935300913719876}
+  - component: {fileID: 7501800698543004546}
+  m_Layer: 5
+  m_Name: Wither Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3317714575606456380
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8948611104600755800}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4871707964481659963}
+  m_Father: {fileID: 8366242386723586529}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: -0.25}
+  m_SizeDelta: {x: 0.19999999, y: 0.20000005}
+  m_Pivot: {x: 0, y: 1}
+--- !u!222 &1969935300913719876
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8948611104600755800}
+  m_CullTransparentMesh: 1
+--- !u!114 &7501800698543004546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8948611104600755800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1

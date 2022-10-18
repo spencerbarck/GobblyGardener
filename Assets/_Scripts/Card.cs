@@ -17,7 +17,7 @@ namespace SB
         [SerializeField] private Image _cardImage;
         [SerializeField] private TextMeshProUGUI _growthCostText;
         [SerializeField] private TextMeshProUGUI _rulesText;
-        [SerializeField] public string _cardRulesText;
+        [SerializeField] private Image _cardWitherImage;
         [Header("Resource Settings")]
         [SerializeField] public int _cardManaCost;
         [SerializeField] public int _cardGrowthCost;
@@ -28,7 +28,8 @@ namespace SB
         [Header("Appearance Settings")]
         [SerializeField] private Color _dryColor;
         [SerializeField] private Color _wateredColor;
-        [SerializeField] public string _cardName;
+        [SerializeField] private string _cardName;
+        [SerializeField] private string _cardRulesText;
         [SerializeField] public Sprite _cardSprite;
         [SerializeField] private GameObject _cardBaseImage;
         [SerializeField] private GameObject _cardHighlightImage;
@@ -38,19 +39,42 @@ namespace SB
         private bool _isEnlarged;
         private bool _isWatered;
         private float _cardZValue = -0.001f;
+        private int _witherCount;
+        private int _maxWither = 2;
         [HideInInspector] public Tile _cardTile;
         private void Start()
+        {
+            UpdateCardUIElements();
+            DryCard();
+        }
+        public void UpdateCardUIElements()
         {
             _cardBaseImage.SetActive(false);
             _cardHighlightImage.SetActive(false);
             _nameText.text = _cardName;
-            _manaCostText.text = _cardManaCost.ToString();
+
             _cardImage.sprite = _cardSprite;
-            _growthCostText.text = _cardGrowthCost.ToString();
             _rulesText.text = _cardRulesText;
 
-            _cardBackSpriteRenderer.color = _dryColor;
-            _cardBaseImage.GetComponent<Image>().color = _dryColor;
+            if(_witherCount>0)
+                _cardWitherImage.gameObject.SetActive(true);
+            else
+                _cardWitherImage.gameObject.SetActive(false);
+
+            if(_cardType==CardType.Garden)
+            {
+                _manaCostText.text = "";
+                if(_cardGrowthCost==1)
+                    _growthCostText.text = _cardGrowthCost.ToString() + " Turn To Grow";
+                else
+                    _growthCostText.text = _cardGrowthCost.ToString() + " Turns To Grow";
+                
+            }
+            else
+            {
+                _manaCostText.text = _cardManaCost.ToString();
+                _growthCostText.text = "";
+            }
         }
         private void Update()
         {
@@ -141,6 +165,9 @@ namespace SB
             _isWatered = true;
             _cardBackSpriteRenderer.color = _wateredColor;
             _cardBaseImage.GetComponent<Image>().color = _wateredColor;
+
+            _witherCount = 0;
+            UpdateCardUIElements();
         }
         private void DryCard()
         {
@@ -155,16 +182,84 @@ namespace SB
                 if(_cardGrowthCost>0)
                 {
                     _cardGrowthCost--;
-                    _growthCostText.text = _cardGrowthCost.ToString();
+                    UpdateCardUIElements();
                 }
                 else
                 {
-                    ResourcesManager.Instance._flowerCount += _flowerYeild;
-                    ResourcesManager.Instance._foodCount += _foodYeild;
-                    ResourcesManager.Instance._manaCount += _manaYeild;
+                    OnHarvest();
                 }
             }
+            else
+            {
+                WitherCard(1);
+            }
             DryCard();
+        }
+        private void WitherCard(int witherAmount)
+        {
+            _witherCount += witherAmount;
+            if(_witherCount>=_maxWither)
+            {
+                _witherCount = 0;
+                UpdateCardUIElements();
+                _cardTile.RemoveTileCard();
+                _cardTile=null;
+                transform.position = CompostManager.Instance.GetCompostTransform().position;
+                CompostManager.Instance.AddToCompost(this);
+            }
+            UpdateCardUIElements();
+        }
+        private void OnHarvest()
+        {
+            ResourcesManager.Instance._flowerCount += _flowerYeild;
+            ResourcesManager.Instance._foodCount += _foodYeild;
+            ResourcesManager.Instance._manaCount += _manaYeild;
+        }
+        public void OnPlay()
+        {
+            switch(_cardName)
+            {
+                case "Diviners Boots":
+                {
+                    HandManager.Instance.DrawSpellCard();
+                    HandManager.Instance.DrawSpellCard();
+                    break;
+                }
+                default:
+                {
+                    break;
+                }
+            }
+        }
+        public void OnPlacement(Tile tile)
+        {
+            switch(_cardName)
+            {
+                case "Water Blast":
+                {
+                    tile.WaterCardOnTile();
+                    break;
+                }
+                case "Magic Hose":
+                {
+                    tile.WaterCardOnTile();
+                    break;
+                }
+                case "Gobbly Water Can":
+                {
+                    tile.WaterCardOnTile();
+                    break;
+                }
+                case "Gardeners Miracle":
+                {
+                    tile.WaterCardOnTile();
+                    break;
+                }
+                default:
+                {
+                    break;
+                }
+            }
         }
     }
 }

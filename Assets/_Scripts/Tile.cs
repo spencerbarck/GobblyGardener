@@ -65,6 +65,11 @@ namespace SB
             _tileCard = card;
             _hasCard = true;
         }
+        public void RemoveTileCard()
+        {
+            _tileCard=null;
+            _hasCard = false;
+        }
         public void HarvestCardOnTile()
         {
             if(_tileCard!=null)
