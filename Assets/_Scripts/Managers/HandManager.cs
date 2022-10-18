@@ -46,8 +46,6 @@ namespace SB
         }
         public void PlaceCardSelected(Tile tile)
         {
-            DrawLines.Instance.HideLine();
-
             foreach(CardSlot cardSlot in _cardSlots)
             {
                 if(cardSlot._storedCard == _cardSelected)
@@ -67,11 +65,11 @@ namespace SB
 
             _cardSelected.UnSelectCard();
             _cardSelected = null;
-
-            TileSelectionManager.Instance._tileSelectionType = TileSelectionType.OneXOne;
         }
         public void PlaceCardSelectedInSelectedTiles()
         {
+            DrawLines.Instance.HideLine();
+
             Card cardSelected = _cardSelected;
             if(ResourcesManager.Instance.CheckSpendMana(cardSelected._cardManaCost)==false)
             {
@@ -94,9 +92,13 @@ namespace SB
                     }
                 }
             }
+            _cardSelected = null;
+            
             cardSelected.OnPlay();
             if(cardSelected._cardType == CardType.Spell)
                 HandManager.Instance.MoveToDiscard(cardSelected);
+            
+            TileSelectionManager.Instance._tileSelectionType = TileSelectionType.OneXOne;
         }
         public void DrawGardenCard()
         {

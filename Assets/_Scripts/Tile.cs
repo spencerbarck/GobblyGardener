@@ -55,6 +55,13 @@ namespace SB
         }
         private void OnMouseDown()
         {
+            //Movement
+            if((GardenMovementManager.Instance._isMoving)&&(_tileCard==null))
+            {
+                GardenMovementManager.Instance.PlaceGardenCardToMove(this);
+            }
+            //
+
             if(HandManager.Instance._cardSelected==null)
                 return;
             

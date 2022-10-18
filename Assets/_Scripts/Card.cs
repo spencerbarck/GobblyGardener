@@ -97,6 +97,14 @@ namespace SB
                     HandManager.Instance.PlaceCardSelectedInSelectedTiles();
                 }
             }
+            
+            //Movement
+            if(GardenMovementManager.Instance._isChoosingCard)
+            {
+                GardenMovementManager.Instance.SetGardenCardToMove(this);
+            }
+            //
+
             //Used if card is in the hand
             if(!_isSelected)
                 HandManager.Instance.SelectSingleCard(this);
@@ -124,7 +132,7 @@ namespace SB
         }
         public Card SelectCard()
         {
-            TileSelectionManager.Instance._tileSelectionType = _cardTileSelectionType;
+            OnSelect();
             _isSelected = true;
             HighlightCard();
             return this;
@@ -260,6 +268,42 @@ namespace SB
                     break;
                 }
             }
+        }
+        public void OnSelect()
+        {
+            switch(_cardName)
+            {
+                case "Water Blast":
+                {
+                    TileSelectionManager.Instance._tileSelectionType = _cardTileSelectionType;
+                    break;
+                }
+                case "Magic Hose":
+                {
+                    TileSelectionManager.Instance._tileSelectionType = _cardTileSelectionType;
+                    break;
+                }
+                case "Gobbly Water Can":
+                {
+                    TileSelectionManager.Instance._tileSelectionType = _cardTileSelectionType;
+                    break;
+                }
+                case "Gardeners Miracle":
+                {
+                    TileSelectionManager.Instance._tileSelectionType = _cardTileSelectionType;
+                    break;
+                }
+                case "Blink Gloves":
+                {
+                    GardenMovementManager.Instance._isChoosingCard=true;
+                    break;
+                }
+                default:
+                {
+                    break;
+                }
+            }
+
         }
     }
 }
