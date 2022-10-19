@@ -268,6 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 131804361}
+  _cardSlotNumber: 5
   _hasCard: 0
   _storedCard: {fileID: 0}
 --- !u!61 &131804363
@@ -395,6 +396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 277567689}
+  _cardSlotNumber: 2
   _hasCard: 0
   _storedCard: {fileID: 0}
 --- !u!61 &277567691
@@ -2485,6 +2487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e32017d282eeb4d8c0c133a0e4076a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameState: 1
 --- !u!1 &891883686
 GameObject:
   m_ObjectHideFlags: 0
@@ -3123,6 +3126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 1315500807}
+  _cardSlotNumber: 3
   _hasCard: 0
   _storedCard: {fileID: 0}
 --- !u!61 &1315500809
@@ -3385,6 +3389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 1331291201}
+  _cardSlotNumber: 1
   _hasCard: 0
   _storedCard: {fileID: 0}
 --- !u!61 &1331291203
@@ -3848,6 +3853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 1556938784}
+  _cardSlotNumber: 4
   _hasCard: 0
   _storedCard: {fileID: 0}
 --- !u!61 &1556938786

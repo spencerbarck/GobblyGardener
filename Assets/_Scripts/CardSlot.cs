@@ -7,6 +7,7 @@ namespace SB
     public class CardSlot : MonoBehaviour
     {
         [SerializeField] private SpriteRenderer _renderer;
+        [SerializeField] private int _cardSlotNumber;
         public bool _hasCard;
         public Card _storedCard;
         private void OnMouseEnter()
@@ -23,6 +24,14 @@ namespace SB
                 {
                     _renderer.color = color;
                 }
+            }
+        }
+        private void OnMouseDown()
+        {
+            if(GameManager.Instance._gameState == GameState.PickingHand)
+            {
+                HandManager.Instance.GenerateHand(_cardSlotNumber,5-_cardSlotNumber);
+                GameManager.Instance._gameState = GameState.PlayingCards;
             }
         }
         public void AddCard(Card card)

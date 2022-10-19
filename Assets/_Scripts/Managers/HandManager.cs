@@ -19,16 +19,26 @@ namespace SB
         {       
             GardenDeckManager.Instance.ShuffleDeck();
             SpellDeckManager.Instance.ShuffleDeck();
-            GenerateHand("Garden");
+            GenerateHand(0,5);
         }
         
-        public void GenerateHand(string cardType)
+        public void GenerateHand(int spellCards ,int gardenCards)
         {
             for(int i = 0; i<_cardSlots.Count ; i++)
             {
-                if(!_cardSlots[i]._hasCard)
-                    if(cardType == "Garden")DrawGardenCard();
-                    if(cardType == "Spell")DrawSpellCard();
+                if((!_cardSlots[i]._hasCard)&&(spellCards>0))
+                {
+                    DrawSpellCard();
+                    spellCards--;
+                }
+            }
+            for(int i = 0; i<_cardSlots.Count ; i++)
+            {
+                if((!_cardSlots[i]._hasCard)&&(gardenCards>0))
+                {
+                    DrawGardenCard();
+                    gardenCards--;
+                }
             }
         }
         public void SelectSingleCard(Card card)
