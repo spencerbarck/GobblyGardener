@@ -9,6 +9,22 @@ namespace SB
         [SerializeField] private SpriteRenderer _renderer;
         public bool _hasCard;
         public Card _storedCard;
+        private void OnMouseEnter()
+        {
+            if(GameManager.Instance._gameState == GameState.PickingHand)
+                _renderer.color = Color.blue;
+        }
+        private void OnMouseExit()
+        {
+            if(GameManager.Instance._gameState == GameState.PickingHand)
+            {
+                Color color;
+                if( ColorUtility.TryParseHtmlString("#9F846E", out color))
+                {
+                    _renderer.color = color;
+                }
+            }
+        }
         public void AddCard(Card card)
         {
             _hasCard=true;

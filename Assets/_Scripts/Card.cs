@@ -41,9 +41,16 @@ namespace SB
         private float _cardZValue = -0.001f;
         private int _witherCount;
         private int _maxWither = 2;
+        private bool _needsWater = true;
         [HideInInspector] public Tile _cardTile;
         private void Start()
         {
+            InitCard();
+        }
+        private void InitCard()
+        {
+            _witherCount = 0;
+            _needsWater = true;
             UpdateCardUIElements();
             DryCard();
         }
@@ -170,6 +177,7 @@ namespace SB
         }
         public void WaterCard()
         {
+            OnWater();
             _isWatered = true;
             _cardBackSpriteRenderer.color = _wateredColor;
             _cardBaseImage.GetComponent<Image>().color = _wateredColor;
@@ -177,15 +185,33 @@ namespace SB
             _witherCount = 0;
             UpdateCardUIElements();
         }
+        private void OnWater()
+        {
+            switch(_cardName)
+            {
+                case "Arcane Succulent":
+                {
+                    _needsWater = false;
+                    break;
+                }
+                default:
+                {
+                    break;
+                }
+            }
+        }
         private void DryCard()
         {
             _isWatered = false;
-            _cardBackSpriteRenderer.color = _dryColor;
-            _cardBaseImage.GetComponent<Image>().color = _dryColor;
+            if(_needsWater)
+            {
+                _cardBackSpriteRenderer.color = _dryColor;
+                _cardBaseImage.GetComponent<Image>().color = _dryColor;
+            }
         }
         public void HarvestCard()
         {
-            if(_isWatered)
+            if((_isWatered)||(!_needsWater))
             {
                 if(_cardGrowthCost>0)
                 {
@@ -208,8 +234,8 @@ namespace SB
             _witherCount += witherAmount;
             if(_witherCount>=_maxWither)
             {
-                _witherCount = 0;
-                UpdateCardUIElements();
+                InitCard();
+
                 _cardTile.RemoveTileCard();
                 _cardTile=null;
                 transform.position = CompostManager.Instance.GetCompostTransform().position;

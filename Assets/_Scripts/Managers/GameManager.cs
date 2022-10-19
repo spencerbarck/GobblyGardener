@@ -7,6 +7,7 @@ namespace SB
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance;
+        public GameState _gameState = GameState.PlayingCards;
         private void Awake()
         {
             Instance = this;
@@ -35,4 +36,10 @@ namespace SB
             SpellDeckManager.Instance._deck=tempSpellDeck;
         }
     }
+}
+
+public enum GameState
+{
+  PickingHand,
+  PlayingCards
 }

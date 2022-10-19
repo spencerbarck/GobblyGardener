@@ -741,7 +741,7 @@ MonoBehaviour:
   _dryColor: {r: 0.49056602, g: 0.22816822, b: 0.057386946, a: 1}
   _wateredColor: {r: 0.33962262, g: 0.1569604, b: 0.039729424, a: 1}
   _cardName: Arcane Succulent
-  _cardRulesText: Yeilds One Mana
+  _cardRulesText: 'Yeilds One Mana     Arcane Cuticle: Only needs to be watered once'
   _cardSprite: {fileID: 21300000, guid: 8a42c678b5d76d345ac4ab3eca1ec35e, type: 3}
   _cardBaseImage: {fileID: 3424350679945073107}
   _cardHighlightImage: {fileID: 2681291910338739265}

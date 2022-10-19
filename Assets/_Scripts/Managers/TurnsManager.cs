@@ -38,7 +38,8 @@ namespace SB
             }
             _currentTurn++;
             HandManager.Instance.DiscardHand();
-            HandManager.Instance.GenerateHand("Spell");
+            GameManager.Instance._gameState = GameState.PickingHand;
+            //HandManager.Instance.GenerateHand("Spell");
         }
     }
 }
