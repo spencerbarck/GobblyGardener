@@ -44,13 +44,16 @@ namespace SB
         private bool _needsWater = true;
         private int _waterCount = 0;
         private int _waterCountNeeded = 1;
+        private bool _isGrown;
         [HideInInspector] public Tile _cardTile;
         private void Start()
         {
             InitCard();
         }
-        private void InitCard()
+        public void InitCard()
         {
+            _isGrown=false;
+            _waterCount=0;
             _witherCount = 0;
             _needsWater = true;
             UpdateCardUIElements();
@@ -232,6 +235,11 @@ namespace SB
                 }
                 else
                 {
+                    if(!_isGrown)
+                    {
+                        _isGrown = true;
+                        GardenGrowthHistoryManager.Instance.AddCard(this);
+                    }
                     OnHarvest();
                 }
             }
@@ -247,7 +255,6 @@ namespace SB
             if(_witherCount>=_maxWither)
             {
                 InitCard();
-
                 _cardTile.RemoveTileCard();
                 _cardTile=null;
                 transform.position = CompostManager.Instance.GetCompostTransform().position;
