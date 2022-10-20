@@ -23,6 +23,7 @@ namespace SB
         {
             _cardMoving._cardTile.RemoveTileCard();
             tile.SetTileCard(_cardMoving);
+            _cardMoving._cardTile = tile;
 
             _cardMoving.transform.position = tile.transform.position;
 

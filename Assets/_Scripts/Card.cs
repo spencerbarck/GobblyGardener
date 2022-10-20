@@ -42,6 +42,8 @@ namespace SB
         private int _witherCount;
         private int _maxWither = 2;
         private bool _needsWater = true;
+        private int _waterCount = 0;
+        private int _waterCountNeeded = 1;
         [HideInInspector] public Tile _cardTile;
         private void Start()
         {
@@ -178,12 +180,6 @@ namespace SB
         public void WaterCard()
         {
             OnWater();
-            _isWatered = true;
-            _cardBackSpriteRenderer.color = _wateredColor;
-            _cardBaseImage.GetComponent<Image>().color = _wateredColor;
-
-            _witherCount = 0;
-            UpdateCardUIElements();
         }
         private void OnWater()
         {
@@ -194,20 +190,36 @@ namespace SB
                     _needsWater = false;
                     break;
                 }
+                case "Greedy Dragondil":
+                {
+                    if(_waterCount<_waterCountNeeded)
+                    {
+                        _waterCount++;
+                        return;
+                    }
+                    break;
+                }
                 default:
                 {
                     break;
                 }
             }
+            _isWatered = true;
+            _cardBackSpriteRenderer.color = _wateredColor;
+            _cardBaseImage.GetComponent<Image>().color = _wateredColor;
+
+            _witherCount = 0;
+            UpdateCardUIElements();
         }
         private void DryCard()
         {
             _isWatered = false;
-            if(_needsWater)
-            {
-                _cardBackSpriteRenderer.color = _dryColor;
-                _cardBaseImage.GetComponent<Image>().color = _dryColor;
-            }
+            _waterCount = 0;
+            if(!_needsWater)
+                return;
+            
+            _cardBackSpriteRenderer.color = _dryColor;
+            _cardBaseImage.GetComponent<Image>().color = _dryColor;
         }
         public void HarvestCard()
         {
