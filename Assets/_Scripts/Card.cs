@@ -314,6 +314,32 @@ namespace SB
                 }
             }
         }
+        public void OnTurnStart()
+        {
+            switch(_cardName)
+            {
+                default:
+                {
+                    break;
+                }
+            }
+        }
+        public void OnPick()
+        {
+            switch(_cardName)
+            {
+                case "Oracle Papyris":
+                {
+                    if((_isGrown)&&(GameManager.Instance._gameState != GameState.PickingHand))
+                        HandManager.Instance.DrawSpellCard();
+                    break;
+                }
+                default:
+                {
+                    break;
+                }
+            }
+        }
         public void OnSelect()
         {
             switch(_cardName)

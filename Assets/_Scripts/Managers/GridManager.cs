@@ -61,5 +61,17 @@ namespace SB
                 }
             }
         }
+
+        public void GardenStartTurn()
+        {
+            for(int x=0;x<GridManager.Instance._width; x++)
+            {
+                for(int y=0;y<GridManager.Instance._height; y++)
+                {
+                    GridManager.Instance._tileDictionary.TryGetValue(new Vector2(x,y), out Tile tile);
+                    tile.StartTurnCardOnTile();
+                }
+            }
+        }
     }
 }

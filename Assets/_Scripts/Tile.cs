@@ -82,6 +82,11 @@ namespace SB
             if(_tileCard!=null)
                 _tileCard.HarvestCard();
         }
+        public void StartTurnCardOnTile()
+        {
+            if(_tileCard!=null)
+                _tileCard.OnTurnStart();
+        }
         public void WaterCardOnTile()
         {
             if(_tileCard!=null)
