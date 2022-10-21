@@ -12,6 +12,34 @@ namespace SB
         {
             Instance = this;
         }
+        public Card PeekTopCard()
+        {
+            return _deck[_deck.Count-1];
+        }
+        public Card PeekBottomCard()
+        {
+            return _deck[0];
+        }
+        public Card PullTopCard()
+        {
+            var cardPulled = _deck[_deck.Count-1];
+            _deck.Remove(_deck[_deck.Count-1]);
+            return cardPulled;
+        }
+        public Card PullBottomCard()
+        {
+            var cardPulled = _deck[0];
+            _deck.Remove(_deck[0]);
+            return cardPulled;
+        }
+        public void PlaceCardOnTopOfDeck(Card card)
+        {
+            _deck.Add(card);
+        }
+        public void PlaceCardOnBottomOfDeck(Card card)
+        {
+            _deck.Insert(0,card);
+        }
         public void ShuffleDeck()
         {
             var count = _deck.Count;

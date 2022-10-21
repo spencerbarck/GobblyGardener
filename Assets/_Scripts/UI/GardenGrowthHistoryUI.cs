@@ -11,7 +11,7 @@ namespace SB
 
         private void Update()
         {
-            _growthCountText.text = "Plants Grown: "+GardenGrowthHistoryManager.Instance._growthHistory.Count.ToString();
+            _growthCountText.text = "Plants Grown: "+GardenGrowthHistoryManager.Instance.GetHistorySize().ToString();
         }
     }
 }

@@ -12,12 +12,12 @@ namespace SB
         public Card _storedCard;
         private void OnMouseEnter()
         {
-            if(GameManager.Instance._gameState == GameState.PickingHand)
+            if(GameManager.Instance.GetGameState() == GameState.PickingHand)
                 _renderer.color = Color.blue;
         }
         private void OnMouseExit()
         {
-            if(GameManager.Instance._gameState == GameState.PickingHand)
+            if(GameManager.Instance.GetGameState() == GameState.PickingHand)
             {
                 Color color;
                 if( ColorUtility.TryParseHtmlString("#9F846E", out color))
@@ -28,10 +28,10 @@ namespace SB
         }
         private void OnMouseDown()
         {
-            if(GameManager.Instance._gameState == GameState.PickingHand)
+            if(GameManager.Instance.GetGameState() == GameState.PickingHand)
             {
                 HandManager.Instance.GenerateHand(_cardSlotNumber,5-_cardSlotNumber);
-                GameManager.Instance._gameState = GameState.PlayingCards;
+                GameManager.Instance.SetGameState(GameState.PlayingCards);
             }
         }
         public void AddCard(Card card)

@@ -8,18 +8,26 @@ namespace SB
     public class GridManager : MonoBehaviour
     {
         public static GridManager Instance;
-        [SerializeField] private Transform _parent;
-        [SerializeField] public int _width, _height;
-        [SerializeField] private float _startXPos, _startYPos, _xTileShift, _yTileShift;
-        [SerializeField] private Tile _tilePrefab;
-        public Dictionary<Vector2, Tile> _tileDictionary;
         private void Awake()
         {
             Instance = this;
         }
+        [SerializeField] private Transform _parent;
+        [SerializeField] private int _width, _height;
+        [SerializeField] private float _startXPos, _startYPos, _xTileShift, _yTileShift;
+        [SerializeField] private Tile _tilePrefab;
+        private Dictionary<Vector2, Tile> _tileDictionary;
         private void Start()
         {
             GenerateGrid();
+        }
+        public int GetHeight()
+        {
+            return _height;
+        }
+        public int GetWidth()
+        {
+            return _width;
         }
         private void GenerateGrid()
         {

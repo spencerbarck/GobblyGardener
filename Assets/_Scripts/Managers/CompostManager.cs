@@ -14,7 +14,10 @@ namespace SB
         {
             Instance = this;
         }
-        public Transform GetCompostTransform(){ return _compostTransform;}
+        public Transform GetCompostTransform()
+        {
+             return _compostTransform;
+        }
         public void AddToCompost(Card card)
         {
             if(_topOfCompost != null)_topOfCompost.gameObject.SetActive(false);

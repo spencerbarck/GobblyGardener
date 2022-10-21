@@ -8,10 +8,17 @@ namespace SB
     {
         public static GardenGrowthHistoryManager Instance;
         [SerializeField] private Transform _growthHistoryTransform;
-        public List<Card> _growthHistory;
+        private List<Card> _growthHistory = new List<Card>();
         private void Awake()
         {
             Instance = this;
+        }
+        public int GetHistorySize()
+        {
+            if(_growthHistory==null)
+                return 0;
+            else
+                return _growthHistory.Count;
         }
         public void AddCard(Card card)
         {
@@ -20,8 +27,7 @@ namespace SB
             cardInHistory.transform.localScale = new Vector2(cardInHistory.transform.localScale.x * 0.75f,cardInHistory.transform.localScale.y * 0.75f);
             cardInHistory.InitCard();
             _growthHistory.Add(cardInHistory);
-            _growthHistoryTransform.Translate(new Vector3(0.125f,-0.5f,0));
-            
+            _growthHistoryTransform.Translate(new Vector3(0,-1.25f,0));
         }
     }
 }

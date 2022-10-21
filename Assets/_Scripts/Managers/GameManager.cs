@@ -7,7 +7,7 @@ namespace SB
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance;
-        public GameState _gameState = GameState.PlayingCards;
+        private GameState _gameState = GameState.PlayingCards;
         private void Awake()
         {
             Instance = this;
@@ -15,6 +15,14 @@ namespace SB
         private void Start()
         {
             InstantiateAllCards();
+        }
+        public GameState GetGameState()
+        {
+            return _gameState;
+        }
+        public void SetGameState(GameState gameState)
+        {
+            _gameState = gameState;
         }
         private void InstantiateAllCards()
         {
@@ -26,6 +34,7 @@ namespace SB
                 tempGardenDeck.Add(newCard);
             }
             GardenDeckManager.Instance._deck=tempGardenDeck;
+
             List<Card> tempSpellDeck = new List<Card>();
             foreach(Card card in SpellDeckManager.Instance._deck)
             {

@@ -2437,7 +2437,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _growthHistoryTransform: {fileID: 2072211060}
-  _growthHistory: []
 --- !u!1 &616111948
 GameObject:
   m_ObjectHideFlags: 0
@@ -2692,7 +2691,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e32017d282eeb4d8c0c133a0e4076a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameState: 1
 --- !u!1 &891883686
 GameObject:
   m_ObjectHideFlags: 0
@@ -4849,7 +4847,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tilesSlected: []
   _isHorizontal: 0
-  _tileSelectionType: 0
 --- !u!1 &1887438568
 GameObject:
   m_ObjectHideFlags: 0
@@ -5043,7 +5040,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072211059}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 2.5, z: 0}
+  m_LocalPosition: {x: -9, y: 2.5, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

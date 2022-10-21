@@ -38,7 +38,7 @@ namespace SB
             }
             _currentTurn++;
             HandManager.Instance.DiscardHand();
-            GameManager.Instance._gameState = GameState.PickingHand;
+            GameManager.Instance.SetGameState(GameState.PickingHand);
 
             GridManager.Instance.GardenStartTurn();
         }

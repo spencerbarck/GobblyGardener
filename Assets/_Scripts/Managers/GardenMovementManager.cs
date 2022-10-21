@@ -6,13 +6,13 @@ namespace SB
     public class GardenMovementManager : MonoBehaviour
     {
         public static GardenMovementManager Instance;
-        public bool _isChoosingCard;
-        public bool _isMoving;
-        private Card _cardMoving;
         private void Awake()
         {
             Instance = this;
         }
+        private Card _cardMoving;
+        public bool _isChoosingCard;
+        public bool _isMoving;
         public void SetGardenCardToMove(Card card)
         {
             _cardMoving = card;

@@ -108,7 +108,7 @@ namespace SB
             if(cardSelected._cardType == CardType.Spell)
                 HandManager.Instance.MoveToDiscard(cardSelected);
             
-            TileSelectionManager.Instance._tileSelectionType = TileSelectionType.OneXOne;
+            TileSelectionManager.Instance.SetTileSelectionType(TileSelectionType.OneXOne);
         }
         public void DrawGardenCard()
         {

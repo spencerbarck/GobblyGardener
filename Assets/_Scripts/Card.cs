@@ -330,7 +330,7 @@ namespace SB
             {
                 case "Oracle Papyris":
                 {
-                    if((_isGrown)&&(GameManager.Instance._gameState != GameState.PickingHand))
+                    if((_isGrown)&&(GameManager.Instance.GetGameState() != GameState.PickingHand))
                         HandManager.Instance.DrawSpellCard();
                     break;
                 }
@@ -346,22 +346,22 @@ namespace SB
             {
                 case "Water Blast":
                 {
-                    TileSelectionManager.Instance._tileSelectionType = _cardTileSelectionType;
+                    TileSelectionManager.Instance.SetTileSelectionType(_cardTileSelectionType);
                     break;
                 }
                 case "Magic Hose":
                 {
-                    TileSelectionManager.Instance._tileSelectionType = _cardTileSelectionType;
+                    TileSelectionManager.Instance.SetTileSelectionType(_cardTileSelectionType);
                     break;
                 }
                 case "Gobbly Water Can":
                 {
-                    TileSelectionManager.Instance._tileSelectionType = _cardTileSelectionType;
+                    TileSelectionManager.Instance.SetTileSelectionType(_cardTileSelectionType);
                     break;
                 }
                 case "Gardeners Miracle":
                 {
-                    TileSelectionManager.Instance._tileSelectionType = _cardTileSelectionType;
+                    TileSelectionManager.Instance.SetTileSelectionType(_cardTileSelectionType);
                     break;
                 }
                 case "Blink Gloves":
