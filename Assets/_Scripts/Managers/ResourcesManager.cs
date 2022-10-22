@@ -7,13 +7,13 @@ namespace SB
     public class ResourcesManager : MonoBehaviour
     {
         public static ResourcesManager Instance;
-        public int _flowerCount;
-        public int _foodCount;
-        public int _manaCount;
         private void Awake()
         {
             Instance = this;
         }
+        public int _flowerCount;
+        public int _foodCount;
+        public int _manaCount;
         public bool CheckSpendMana(int manaCost)
         {
             if(manaCost>_manaCount)

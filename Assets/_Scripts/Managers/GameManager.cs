@@ -7,11 +7,11 @@ namespace SB
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance;
-        private GameState _gameState = GameState.PlayingCards;
         private void Awake()
         {
             Instance = this;
         }
+        private GameState _gameState = GameState.PlayingCards;
         private void Start()
         {
             InstantiateAllCards();
@@ -27,22 +27,28 @@ namespace SB
         private void InstantiateAllCards()
         {
             List<Card> tempGardenDeck = new List<Card>();
-            foreach(Card card in GardenDeckManager.Instance._deck)
+            while(GardenDeckManager.Instance.GetDeckSize()>0)
             {
-                var newCard = Instantiate(card,new Vector2(0,0), Quaternion.identity);
-                newCard.gameObject.SetActive(false);
+                var newCard = Instantiate(GardenDeckManager.Instance.PullTopCard(),new Vector2(0,0), Quaternion.identity);
                 tempGardenDeck.Add(newCard);
             }
-            GardenDeckManager.Instance._deck=tempGardenDeck;
+            while(tempGardenDeck.Count>0)
+            {
+                GardenDeckManager.Instance.PlaceCardOnTopOfDeck(tempGardenDeck[0]);
+                tempGardenDeck.Remove(tempGardenDeck[0]);
+            }
 
             List<Card> tempSpellDeck = new List<Card>();
-            foreach(Card card in SpellDeckManager.Instance._deck)
+            while(SpellDeckManager.Instance.GetDeckSize()>0)
             {
-                var newCard = Instantiate(card,new Vector2(0,0), Quaternion.identity);
-                newCard.gameObject.SetActive(false);
+                var newCard = Instantiate(SpellDeckManager.Instance.PullTopCard(),new Vector2(0,0), Quaternion.identity);
                 tempSpellDeck.Add(newCard);
             }
-            SpellDeckManager.Instance._deck=tempSpellDeck;
+            while(tempSpellDeck.Count>0)
+            {
+                SpellDeckManager.Instance.PlaceCardOnTopOfDeck(tempSpellDeck[0]);
+                tempSpellDeck.Remove(tempSpellDeck[0]);
+            }
         }
     }
 }

@@ -7,10 +7,14 @@ namespace SB
     public class SpellDeckManager : MonoBehaviour
     {
         public static SpellDeckManager Instance;
-        public List<Card> _deck = new List<Card>();
         private void Awake()
         {
             Instance = this;
+        }
+        [SerializeField] private List<Card> _deck = new List<Card>();
+        public int GetDeckSize()
+        {
+            return _deck.Count;
         }
         public Card PeekTopCard()
         {
@@ -24,21 +28,25 @@ namespace SB
         {
             var cardPulled = _deck[_deck.Count-1];
             _deck.Remove(_deck[_deck.Count-1]);
+            cardPulled.gameObject.SetActive(true);
             return cardPulled;
         }
         public Card PullBottomCard()
         {
             var cardPulled = _deck[0];
             _deck.Remove(_deck[0]);
+            cardPulled.gameObject.SetActive(true);
             return cardPulled;
         }
         public void PlaceCardOnTopOfDeck(Card card)
         {
             _deck.Add(card);
+            card.gameObject.SetActive(false);
         }
         public void PlaceCardOnBottomOfDeck(Card card)
         {
             _deck.Insert(0,card);
+            card.gameObject.SetActive(false);
         }
         public void ShuffleDeck()
         {

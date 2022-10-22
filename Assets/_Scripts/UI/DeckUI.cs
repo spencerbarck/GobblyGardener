@@ -11,8 +11,8 @@ namespace SB
         [SerializeField] private TextMeshProUGUI _spellDeckCountText;
         private void Update()
         {
-            _gardenDeckCountText.text = GardenDeckManager.Instance._deck.Count.ToString();
-            _spellDeckCountText.text = SpellDeckManager.Instance._deck.Count.ToString();
+            _gardenDeckCountText.text = GardenDeckManager.Instance.GetDeckSize().ToString();
+            _spellDeckCountText.text = SpellDeckManager.Instance.GetDeckSize().ToString();
         }
         
     }

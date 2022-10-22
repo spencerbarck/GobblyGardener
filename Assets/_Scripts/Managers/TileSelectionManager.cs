@@ -11,9 +11,9 @@ namespace SB
         {
             Instance = this;
         }
+        private TileSelectionType _tileSelectionType;
         public List<Tile> _tilesSlected= new List<Tile>();
         public bool _isHorizontal;
-        private TileSelectionType _tileSelectionType;
         private void Start()
         {
             _tileSelectionType = TileSelectionType.OneXOne;

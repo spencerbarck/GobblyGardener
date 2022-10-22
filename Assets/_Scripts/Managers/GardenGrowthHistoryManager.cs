@@ -15,10 +15,7 @@ namespace SB
         }
         public int GetHistorySize()
         {
-            if(_growthHistory==null)
-                return 0;
-            else
-                return _growthHistory.Count;
+            return _growthHistory.Count;
         }
         public void AddCard(Card card)
         {
@@ -27,7 +24,7 @@ namespace SB
             cardInHistory.transform.localScale = new Vector2(cardInHistory.transform.localScale.x * 0.75f,cardInHistory.transform.localScale.y * 0.75f);
             cardInHistory.InitCard();
             _growthHistory.Add(cardInHistory);
-            _growthHistoryTransform.Translate(new Vector3(0,-1.25f,0));
+            _growthHistoryTransform.Translate(new Vector3(0,-1.33f,0));
         }
     }
 }

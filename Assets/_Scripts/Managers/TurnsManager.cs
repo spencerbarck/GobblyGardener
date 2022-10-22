@@ -7,12 +7,12 @@ namespace SB
     public class TurnsManager : MonoBehaviour
     {
         public static TurnsManager Instance;
-        private int _currentTurn = 0;
-        private string _currentTurnType;
         private void Awake()
         {
             Instance = this;
         }
+        private int _currentTurn = 0;
+        private string _currentTurnType;
         private void Start()
         {
             _currentTurnType="Planting";

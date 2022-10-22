@@ -7,23 +7,25 @@ namespace SB
     public class HandManager : MonoBehaviour
     {
         public static HandManager Instance;
-        [SerializeField] List<CardSlot> _cardSlots;
-        [SerializeField] Card _cardPrefab;
-        public Card _cardSelected;
-        public List<Card> _hand = new List<Card>();
         private void Awake()
         {
             Instance = this;
         }
+        [SerializeField] List<CardSlot> _cardSlots;
+        [SerializeField] Card _cardPrefab;
+        public Card _cardSelected;
+        public List<Card> _hand = new List<Card>();
+        private int _maxHandSize = 5;
         private void Start()
         {       
             GardenDeckManager.Instance.ShuffleDeck();
             SpellDeckManager.Instance.ShuffleDeck();
             GenerateHand(0,5);
         }
-        
         public void GenerateHand(int spellCards ,int gardenCards)
         {
+            if((spellCards+gardenCards) >_maxHandSize)
+                return;
             for(int i = 0; i<_cardSlots.Count ; i++)
             {
                 if((!_cardSlots[i]._hasCard)&&(spellCards>0))
@@ -112,25 +114,22 @@ namespace SB
         }
         public void DrawGardenCard()
         {
-            if(GardenDeckManager.Instance._deck.Count == 0)
+            if(GardenDeckManager.Instance.GetDeckSize() == 0)
                 CompostManager.Instance.ReloadDeckFromCompost();
 
-            if(GardenDeckManager.Instance._deck.Count >= 1)
+            if(GardenDeckManager.Instance.GetDeckSize() >= 1)
             {
-                Card randCard = GardenDeckManager.Instance._deck[Random.Range(0,GardenDeckManager.Instance._deck.Count)];
                 for(int i = 0; i < _cardSlots.Count; i++)
                 {
                     if(!_cardSlots[i]._hasCard)
                     {
+                        Card cardDrawn = GardenDeckManager.Instance.PullTopCard();
+
                         CardSlot cardSlot = _cardSlots[i];
 
-                        GardenDeckManager.Instance._deck.Remove(randCard);
-
-                        randCard.transform.position = cardSlot.transform.position;
-                        cardSlot.AddCard(randCard);
-                        _hand.Add(randCard);
-
-                        randCard.gameObject.SetActive(true);
+                        cardDrawn.transform.position = cardSlot.transform.position;
+                        cardSlot.AddCard(cardDrawn);
+                        _hand.Add(cardDrawn);
                         return;
                     }
                 }
@@ -141,26 +140,22 @@ namespace SB
             if(TurnsManager.Instance.GetCurrentTurnType()=="Planting")
                 return;
 
-            if(SpellDeckManager.Instance._deck.Count == 0)
+            if(SpellDeckManager.Instance.GetDeckSize() == 0)
                 SpellHistoryManager.Instance.ReloadDeckSpellHistory();
 
-            if(SpellDeckManager.Instance._deck.Count >= 1)
+            if(SpellDeckManager.Instance.GetDeckSize() >= 1)
             {
-                Card randCard = SpellDeckManager.Instance._deck[Random.Range(0,SpellDeckManager.Instance._deck.Count)];
                 for(int i = 0; i < _cardSlots.Count; i++)
                 {
                     if(!_cardSlots[i]._hasCard)
                     {
+                        Card cardDrawn = SpellDeckManager.Instance.PullTopCard();
+
                         CardSlot cardSlot = _cardSlots[i];
-
-                        SpellDeckManager.Instance._deck.Remove(randCard);
                         
-                        randCard.transform.position = cardSlot.transform.position;
-                        cardSlot.AddCard(randCard);
-
-                        _hand.Add(randCard);
-
-                        randCard.gameObject.SetActive(true);
+                        cardDrawn.transform.position = cardSlot.transform.position;
+                        cardSlot.AddCard(cardDrawn);
+                        _hand.Add(cardDrawn);
                         return;
                     }
                 }

@@ -69,7 +69,6 @@ namespace SB
                 }
             }
         }
-
         public void GardenStartTurn()
         {
             for(int x=0;x<GridManager.Instance._width; x++)

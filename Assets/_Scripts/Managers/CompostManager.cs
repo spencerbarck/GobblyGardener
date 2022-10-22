@@ -7,13 +7,13 @@ namespace SB
     public class CompostManager : MonoBehaviour
     {
         public static CompostManager Instance;
-        [SerializeField] private Transform _compostTransform;
-        [SerializeField] private List<Card> _compostList = new List<Card>();
-        private Card _topOfCompost;
         private void Awake()
         {
             Instance = this;
         }
+        [SerializeField] private Transform _compostTransform;
+        [SerializeField] private List<Card> _compostList = new List<Card>();
+        private Card _topOfCompost;
         public Transform GetCompostTransform()
         {
              return _compostTransform;
@@ -31,8 +31,7 @@ namespace SB
 
             while(_compostList.Count>0)
             {
-                _compostList[0].gameObject.SetActive(false);
-                GardenDeckManager.Instance._deck.Add(_compostList[0]);
+                GardenDeckManager.Instance.PlaceCardOnTopOfDeck(_compostList[0]);
                 _compostList.Remove(_compostList[0]);
             }
             GardenDeckManager.Instance.ShuffleDeck();
