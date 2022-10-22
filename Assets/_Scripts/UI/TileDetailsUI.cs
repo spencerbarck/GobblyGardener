@@ -12,14 +12,14 @@ namespace SB
 
         private void Update()
         {
-            if(TileSelectionManager.Instance._tilesSlected.Count!=0)
+            if(TileSelectionManager.Instance.GetTilesSelected().Count!=0)
             {
                 string locationString = "";
-                locationString+= TileSelectionManager.Instance._tilesSlected[0]._tileX;
+                locationString+= TileSelectionManager.Instance.PeekFirstTileSelected()._tileX;
                 locationString+=" ";
-                locationString+= TileSelectionManager.Instance._tilesSlected[0]._tileY;
+                locationString+= TileSelectionManager.Instance.PeekFirstTileSelected()._tileY;
                 _tileValueText.text = locationString;
-                _tileColorText.text = TileSelectionManager.Instance._tilesSlected[0].GetSpriteRenderer().color.ToString();
+                _tileColorText.text = TileSelectionManager.Instance.PeekFirstTileSelected().GetSpriteRenderer().color.ToString();
             }
             else
             {

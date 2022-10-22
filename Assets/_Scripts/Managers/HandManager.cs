@@ -12,7 +12,6 @@ namespace SB
             Instance = this;
         }
         [SerializeField] List<CardSlot> _cardSlots;
-        [SerializeField] Card _cardPrefab;
         public Card _cardSelected;
         public List<Card> _hand = new List<Card>();
         private int _maxHandSize = 5;
@@ -56,7 +55,26 @@ namespace SB
                 _cardSelected = card.SelectCard();
             }
         }
-        public void PlaceCardSelected(Tile tile)
+        public void PlaceCardSelectedInSelectedTiles()
+        {
+            if((_cardSelected._cardType == CardType.Garden)&&(TileSelectionManager.Instance.PeekFirstTileSelected()._hasCard))
+                return;
+
+            DrawLines.Instance.HideLine();
+
+            if(ResourcesManager.Instance.CheckSpendMana(_cardSelected._cardManaCost)==false)
+                return;
+
+            foreach(Tile tile in TileSelectionManager.Instance.GetTilesSelected())
+            {
+                _cardSelected.OnPlacement(tile);
+            }
+            var cardTemp = _cardSelected;
+            RemoveCardSelectedFromHand();
+            cardTemp.OnPlay();
+            TileSelectionManager.Instance.SetTileSelectionType(TileSelectionType.OneXOne);
+        }
+        private void RemoveCardSelectedFromHand()
         {
             foreach(CardSlot cardSlot in _cardSlots)
             {
@@ -66,51 +84,8 @@ namespace SB
                 }
             }
             _hand.Remove(_cardSelected);
-
-            if(_cardSelected._cardType == CardType.Garden)
-            {
-                tile.SetTileCard(_cardSelected);
-                _cardSelected._cardTile = tile;
-                _cardSelected.transform.position = tile.transform.position;
-            }
-            _cardSelected.OnPlacement(tile);
-
             _cardSelected.UnSelectCard();
             _cardSelected = null;
-        }
-        public void PlaceCardSelectedInSelectedTiles()
-        {
-            DrawLines.Instance.HideLine();
-
-            Card cardSelected = _cardSelected;
-            if(ResourcesManager.Instance.CheckSpendMana(cardSelected._cardManaCost)==false)
-            {
-                return;
-            }
-
-            foreach(Tile tile in TileSelectionManager.Instance._tilesSlected)
-            {
-                if(cardSelected._cardType == CardType.Spell)
-                {
-                    HandManager.Instance.PlaceCardSelected(tile);
-                    HandManager.Instance._cardSelected=cardSelected;
-                }
-                else if(cardSelected._cardType == CardType.Garden)
-                {
-                    if(!tile._hasCard)
-                    {
-                        HandManager.Instance.PlaceCardSelected(tile);
-                        HandManager.Instance._cardSelected=cardSelected;
-                    }
-                }
-            }
-            _cardSelected = null;
-            
-            cardSelected.OnPlay();
-            if(cardSelected._cardType == CardType.Spell)
-                HandManager.Instance.MoveToDiscard(cardSelected);
-            
-            TileSelectionManager.Instance.SetTileSelectionType(TileSelectionType.OneXOne);
         }
         public void DrawGardenCard()
         {
@@ -161,25 +136,6 @@ namespace SB
                 }
             }
         }
-        public void DiscardCardSelected()
-        {
-            if(_cardSelected!= null)
-            {
-                foreach(CardSlot cardSlot in _cardSlots)
-                {
-                    if(cardSlot._storedCard == _cardSelected)
-                    {
-                        cardSlot.RemoveCard();
-                    }
-                }
-                _hand.Remove(_cardSelected);
-
-                MoveToDiscard(_cardSelected);
-
-                _cardSelected.UnSelectCard();
-                _cardSelected = null;
-            }
-        }
         public void DiscardHand()
         {
             for(int i = 0; i < _cardSlots.Count; i++)
@@ -204,12 +160,10 @@ namespace SB
         {
             if(card._cardType == CardType.Garden)
             {
-                card.transform.position = CompostManager.Instance.GetCompostTransform().position;
                 CompostManager.Instance.AddToCompost(card);
             }
             else if(card._cardType == CardType.Spell)
             {
-                card.transform.position = SpellHistoryManager.Instance.GetSpellHistoryTransform().position;
                 SpellHistoryManager.Instance.AddToSpellHistory(card);
             }
         }

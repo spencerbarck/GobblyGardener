@@ -38,17 +38,28 @@ namespace SB
         private bool _isSelected;
         private bool _isEnlarged;
         private bool _isWatered;
+        private bool _isGrown;
+        private bool _needsWater = true;
         private float _cardZValue = -0.001f;
         private int _witherCount;
         private int _maxWither = 2;
-        private bool _needsWater = true;
         private int _waterCount = 0;
         private int _waterCountNeeded = 1;
-        private bool _isGrown;
         [HideInInspector] public Tile _cardTile;
         private void Start()
         {
             InitCard();
+        }
+        private void Update()
+        {
+            if(_isEnlarged)
+            {
+                transform.position = new Vector3(transform.position.x,transform.position.y,_cardZValue-0.01f);
+            }
+            else
+            {
+                transform.position = new Vector3(transform.position.x,transform.position.y,_cardZValue);
+            }
         }
         public void InitCard()
         {
@@ -88,17 +99,9 @@ namespace SB
                 _growthCostText.text = "";
             }
         }
-        private void Update()
-        {
-            if(_isEnlarged)
-            {
-                transform.position = new Vector3(transform.position.x,transform.position.y,_cardZValue-0.01f);
-            }
-            else
-            {
-                transform.position = new Vector3(transform.position.x,transform.position.y,_cardZValue);
-            }
-        }
+        //
+        //Card Selection / Viewing
+        //
         private void OnMouseDown()
         {
             //Used if card is in the garden
@@ -144,9 +147,9 @@ namespace SB
         }
         public Card SelectCard()
         {
-            OnSelect();
             _isSelected = true;
             HighlightCard();
+            OnSelect();
             return this;
         }
         public void UnSelectCard()
@@ -180,39 +183,12 @@ namespace SB
             _cardBaseImage.SetActive(false);
             _cardHighlightImage.SetActive(false);
         }
+        //
+        //Card Watering / Harvesting
+        //
         public void WaterCard()
         {
             OnWater();
-        }
-        private void OnWater()
-        {
-            switch(_cardName)
-            {
-                case "Arcane Succulent":
-                {
-                    _needsWater = false;
-                    break;
-                }
-                case "Greedy Dragondil":
-                {
-                    if(_waterCount<_waterCountNeeded)
-                    {
-                        _waterCount++;
-                        return;
-                    }
-                    break;
-                }
-                default:
-                {
-                    break;
-                }
-            }
-            _isWatered = true;
-            _cardBackSpriteRenderer.color = _wateredColor;
-            _cardBaseImage.GetComponent<Image>().color = _wateredColor;
-
-            _witherCount = 0;
-            UpdateCardUIElements();
         }
         private void DryCard()
         {
@@ -262,6 +238,9 @@ namespace SB
             }
             UpdateCardUIElements();
         }
+        //
+        //Card Behavior
+        //
         private void OnHarvest()
         {
             ResourcesManager.Instance._flowerCount += _flowerYeild;
@@ -283,9 +262,47 @@ namespace SB
                     break;
                 }
             }
+            if(this._cardType == CardType.Spell)
+                SpellHistoryManager.Instance.AddToSpellHistory(this);
+        }
+        private void OnWater()
+        {
+            switch(_cardName)
+            {
+                case "Arcane Succulent":
+                {
+                    _needsWater = false;
+                    break;
+                }
+                case "Greedy Dragondil":
+                {
+                    if(_waterCount<_waterCountNeeded)
+                    {
+                        _waterCount++;
+                        return;
+                    }
+                    break;
+                }
+                default:
+                {
+                    break;
+                }
+            }
+            _isWatered = true;
+            _cardBackSpriteRenderer.color = _wateredColor;
+            _cardBaseImage.GetComponent<Image>().color = _wateredColor;
+
+            _witherCount = 0;
+            UpdateCardUIElements();
         }
         public void OnPlacement(Tile tile)
         {
+            if(_cardType == CardType.Garden)
+            {
+                tile.SetTileCard(this);
+                _cardTile = tile;
+                transform.position = tile.transform.position;
+            }
             switch(_cardName)
             {
                 case "Water Blast":

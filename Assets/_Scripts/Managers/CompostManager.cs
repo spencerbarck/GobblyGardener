@@ -20,6 +20,7 @@ namespace SB
         }
         public void AddToCompost(Card card)
         {
+            card.transform.position = CompostManager.Instance.GetCompostTransform().position;
             if(_topOfCompost != null)_topOfCompost.gameObject.SetActive(false);
             _topOfCompost=card;
             _compostList.Add(card);

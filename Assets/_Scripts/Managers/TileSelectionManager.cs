@@ -12,7 +12,7 @@ namespace SB
             Instance = this;
         }
         private TileSelectionType _tileSelectionType;
-        public List<Tile> _tilesSlected= new List<Tile>();
+        private List<Tile> _tilesSlected= new List<Tile>();
         public bool _isHorizontal;
         private void Start()
         {
@@ -24,6 +24,14 @@ namespace SB
             {
                 _isHorizontal=!_isHorizontal;
             }
+        }
+        public List<Tile> GetTilesSelected()
+        {
+            return _tilesSlected;
+        }
+        public Tile PeekFirstTileSelected()
+        {
+            return _tilesSlected[0];
         }
         public TileSelectionType GetTileSelectionType()
         {

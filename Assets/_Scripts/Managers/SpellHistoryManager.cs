@@ -20,6 +20,7 @@ namespace SB
         }
         public void AddToSpellHistory(Card card)
         {
+            card.transform.position = SpellHistoryManager.Instance.GetSpellHistoryTransform().position;
             if(_topOfSpellHistory != null)_topOfSpellHistory.gameObject.SetActive(false);
             _topOfSpellHistory=card;
             _spellHistoryList.Add(card);
