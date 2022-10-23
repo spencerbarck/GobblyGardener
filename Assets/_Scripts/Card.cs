@@ -40,6 +40,7 @@ namespace SB
         private bool _isWatered;
         private bool _isGrown;
         private bool _needsWater = true;
+        [HideInInspector] public bool _canWither = true;
         private float _cardZValue = -0.001f;
         private int _witherCount;
         private int _maxWither = 2;
@@ -67,6 +68,7 @@ namespace SB
             _waterCount=0;
             _witherCount = 0;
             _needsWater = true;
+            _canWither = true;
             UpdateCardUIElements();
             DryCard();
         }
@@ -193,6 +195,7 @@ namespace SB
         private void DryCard()
         {
             _isWatered = false;
+            _canWither = true;
             _waterCount = 0;
             if(!_needsWater)
                 return;
@@ -227,6 +230,9 @@ namespace SB
         }
         private void WitherCard(int witherAmount)
         {
+            if(!_canWither)
+                return;
+
             _witherCount += witherAmount;
             if(_witherCount>=_maxWither)
             {
@@ -349,6 +355,23 @@ namespace SB
                 {
                     if((_isGrown)&&(GameManager.Instance.GetGameState() != GameState.PickingHand))
                         HandManager.Instance.DrawSpellCard();
+                    break;
+                }
+                case "Clover of Youth":
+                {
+                    _canWither = false;
+                    if(GridManager.Instance.GetAdjacentTiles(this._cardTile,-1,0)!=null)
+                        if(GridManager.Instance.GetAdjacentTiles(this._cardTile,-1,0).PeekTileCard()!=null)
+                            GridManager.Instance.GetAdjacentTiles(this._cardTile,-1,0).PeekTileCard()._canWither=false;
+                    if(GridManager.Instance.GetAdjacentTiles(this._cardTile,1,0)!=null)
+                        if(GridManager.Instance.GetAdjacentTiles(this._cardTile,1,0).PeekTileCard()!=null)
+                            GridManager.Instance.GetAdjacentTiles(this._cardTile,1,0).PeekTileCard()._canWither=false;
+                    if(GridManager.Instance.GetAdjacentTiles(this._cardTile,0,-1)!=null)
+                        if(GridManager.Instance.GetAdjacentTiles(this._cardTile,0,-1).PeekTileCard()!=null)
+                            GridManager.Instance.GetAdjacentTiles(this._cardTile,0,-1).PeekTileCard()._canWither=false;
+                    if(GridManager.Instance.GetAdjacentTiles(this._cardTile,0,1)!=null)
+                        if(GridManager.Instance.GetAdjacentTiles(this._cardTile,0,1).PeekTileCard()!=null)
+                            GridManager.Instance.GetAdjacentTiles(this._cardTile,0,1).PeekTileCard()._canWither=false;
                     break;
                 }
                 default:

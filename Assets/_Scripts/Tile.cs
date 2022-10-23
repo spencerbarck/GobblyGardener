@@ -72,6 +72,10 @@ namespace SB
             _tileCard = card;
             _hasCard = true;
         }
+        public Card PeekTileCard()
+        {
+            return _tileCard;
+        }
         public void RemoveTileCard()
         {
             _tileCard=null;

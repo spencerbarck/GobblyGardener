@@ -594,6 +594,7 @@ MonoBehaviour:
   _cardHighlightImage: {fileID: 2681291910338739265}
   _cardBackSpriteRenderer: {fileID: 3652784755321740072}
   _highlight: {fileID: 4046226622406558708}
+  _canWither: 1
   _cardTile: {fileID: 0}
 --- !u!61 &8306015245685303153
 BoxCollider2D:

@@ -575,7 +575,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3652784755321740075}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: -2.99, z: 0}
+  m_LocalPosition: {x: 0, y: -2.99, z: 0}
   m_LocalScale: {x: 1.26, y: 1.76, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -671,6 +671,7 @@ MonoBehaviour:
   _cardHighlightImage: {fileID: 2681291910338739265}
   _cardBackSpriteRenderer: {fileID: 3652784755321740072}
   _highlight: {fileID: 4046226622406558708}
+  _canWither: 1
   _cardTile: {fileID: 0}
 --- !u!61 &8306015245685303153
 BoxCollider2D:

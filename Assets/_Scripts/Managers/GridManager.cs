@@ -80,5 +80,9 @@ namespace SB
                 }
             }
         }
+        public Tile GetAdjacentTiles(Tile tile, int directionX, int directionY)
+        {
+            return GetTileAtPosition(new Vector2(tile._tileX+directionX,tile._tileY+directionY));
+        }
     }
 }
