@@ -410,6 +410,7 @@
 "Assets/TextMesh Pro/Examples & Extras/Scripts/WarpTextExample.cs"
 "Assets/_Scripts/Card.cs"
 "Assets/_Scripts/CardSlot.cs"
+"Assets/_Scripts/Friend.cs"
 "Assets/_Scripts/Managers/CompostManager.cs"
 "Assets/_Scripts/Managers/GameManager.cs"
 "Assets/_Scripts/Managers/GardenDeckManager.cs"

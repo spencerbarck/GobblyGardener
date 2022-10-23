@@ -19,10 +19,11 @@ namespace SB
         {       
             GardenDeckManager.Instance.ShuffleDeck();
             SpellDeckManager.Instance.ShuffleDeck();
-            GenerateHand(0,5);
+            GenerateHand(0);
         }
-        public void GenerateHand(int spellCards ,int gardenCards)
+        public void GenerateHand(int spellCards)
         {
+            var gardenCards = _maxHandSize - spellCards;
             if((spellCards+gardenCards) >_maxHandSize)
                 return;
             for(int i = 0; i<_cardSlots.Count ; i++)
@@ -78,9 +79,9 @@ namespace SB
         {
             foreach(CardSlot cardSlot in _cardSlots)
             {
-                if(cardSlot._storedCard == _cardSelected)
+                if(cardSlot.GetStoredCard() == _cardSelected)
                 {
-                    cardSlot.RemoveCard();
+                    cardSlot.RemoveStoredCard();
                 }
             }
             _hand.Remove(_cardSelected);
@@ -103,7 +104,7 @@ namespace SB
                         CardSlot cardSlot = _cardSlots[i];
 
                         cardDrawn.transform.position = cardSlot.transform.position;
-                        cardSlot.AddCard(cardDrawn);
+                        cardSlot.StoreACard(cardDrawn);
                         _hand.Add(cardDrawn);
                         return;
                     }
@@ -129,7 +130,7 @@ namespace SB
                         CardSlot cardSlot = _cardSlots[i];
                         
                         cardDrawn.transform.position = cardSlot.transform.position;
-                        cardSlot.AddCard(cardDrawn);
+                        cardSlot.StoreACard(cardDrawn);
                         _hand.Add(cardDrawn);
                         return;
                     }
@@ -138,21 +139,18 @@ namespace SB
         }
         public void DiscardHand()
         {
+            if(_cardSelected!=null)
+            {
+                _cardSelected.UnSelectCard();
+                _cardSelected = null;
+            }
             for(int i = 0; i < _cardSlots.Count; i++)
             {
                 if(_cardSlots[i]._hasCard)
                 {
-                    Card card = _cardSlots[i]._storedCard;
-                    _hand.Remove(card);
-                    
-                    MoveToDiscard(card);
-                    
-                    if(card==_cardSelected)
-                    {
-                        _cardSelected.UnSelectCard();
-                        _cardSelected = null;
-                    }
-                    _cardSlots[i].RemoveCard();
+                    _hand.Remove(_cardSlots[i].GetStoredCard());
+                    MoveToDiscard(_cardSlots[i].GetStoredCard());
+                    _cardSlots[i].RemoveStoredCard();
                 }
             }
         }

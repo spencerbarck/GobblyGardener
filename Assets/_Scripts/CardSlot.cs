@@ -9,7 +9,11 @@ namespace SB
         [SerializeField] private SpriteRenderer _renderer;
         [SerializeField] private int _cardSlotNumber;
         public bool _hasCard;
-        public Card _storedCard;
+        private Card _storedCard;
+        public Card GetStoredCard()
+        {
+            return _storedCard;
+        }
         private void OnMouseEnter()
         {
             if(GameManager.Instance.GetGameState() == GameState.PickingHand)
@@ -30,17 +34,17 @@ namespace SB
         {
             if(GameManager.Instance.GetGameState() == GameState.PickingHand)
             {
-                HandManager.Instance.GenerateHand(_cardSlotNumber,5-_cardSlotNumber);
+                HandManager.Instance.GenerateHand(_cardSlotNumber);
                 GameManager.Instance.SetGameState(GameState.PlayingCards);
             }
         }
-        public void AddCard(Card card)
+        public void StoreACard(Card card)
         {
             _hasCard=true;
             _renderer.color = Color.blue;
             _storedCard = card;
         }
-        public void RemoveCard()
+        public void RemoveStoredCard()
         {
             _hasCard=false;
             Color color;

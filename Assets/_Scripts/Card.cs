@@ -388,6 +388,7 @@ namespace SB
                 }
                 default:
                 {
+                    TileSelectionManager.Instance.SetTileSelectionType(_cardTileSelectionType);
                     break;
                 }
             }
