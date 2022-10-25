@@ -8,6 +8,7 @@ namespace SB
 {
     public class Friend : MonoBehaviour
     {
+        [SerializeField] private Canvas _friendCanvas;
         [SerializeField] private TextMeshProUGUI _friendNameText;
         [SerializeField] private Image _friendImage;
         [SerializeField] private TextMeshProUGUI _requirementOneText;
@@ -22,6 +23,10 @@ namespace SB
             _friendImage.sprite =_friendSprite;
             _requirementOneText.text = _requirementOne;
             _requirementTwoText.text = _requirementTwo;
+        }
+        public void SetCanvasCamera()
+        {
+            _friendCanvas.worldCamera = FindObjectOfType<Camera>();
         }
     }
 }
