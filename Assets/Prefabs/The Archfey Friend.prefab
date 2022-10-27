@@ -511,7 +511,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &6841378227922137831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -552,8 +552,8 @@ MonoBehaviour:
   _inCompleteColor: {r: 1, g: 0, b: 0, a: 1}
   _friendName: The Archfey
   _friendSprite: {fileID: 21300000, guid: a60c95cefac04134292e2b34ee0a540a, type: 3}
-  _requirementOne: Yeild Ten mana in a single turn
-  _requirementTwo: Draw Eight Cards in a single turn
+  _requirementOne: Yeild 10 Mana in a Single Turn
+  _requirementTwo: Draw 8 Cards in a Single Turn
 --- !u!1 &6841378227927346352
 GameObject:
   m_ObjectHideFlags: 0

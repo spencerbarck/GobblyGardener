@@ -26,5 +26,16 @@ namespace SB
             _growthHistory.Add(cardInHistory);
             _growthHistoryTransform.Translate(new Vector3(0,-1.33f,0));
         }
+        public int GetCardCount(string name)
+        {
+            var count = 0;
+            foreach(Card card in _growthHistory)
+            {
+                if(card.GetCardName()==name)
+                    count++;
+            }
+
+            return count;
+        }
     }
 }

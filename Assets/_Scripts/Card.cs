@@ -101,6 +101,10 @@ namespace SB
                 _growthCostText.text = "";
             }
         }
+        public string GetCardName()
+        {
+            return _cardName;
+        }
         //
         //Card Selection / Viewing
         //

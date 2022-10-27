@@ -21,7 +21,8 @@ namespace SB
         [SerializeField] private Sprite _friendSprite;
         [SerializeField] private string _requirementOne;
         [SerializeField] private string _requirementTwo;
-        private bool _isComplete;
+        private bool _reqOneIsComplete;
+        private bool _reqTwoIsComplete;
         private void Start()
         {
             _friendNameText.text = _friendName;
@@ -37,41 +38,71 @@ namespace SB
         }
         private void Update()
         {
-            if(!_isComplete)
-                if(CheckComplete())
-                    SetComplete();
+            if(!_reqOneIsComplete)
+            {
+                if(CheckComplete(_requirementOne))
+                    SetComplete(1);
+            }
+
+            if(!_reqTwoIsComplete)
+            {
+                if(CheckComplete(_requirementTwo))
+                    SetComplete(2);
+            }
         }
-        private bool CheckComplete()
+        private bool CheckComplete(string reqText)
         {
             var completeCheck = false;
-            switch(_friendName)
+            switch(reqText)
             {
-                case "The Archfey":
+                case "Yeild 10 Mana in a Single Turn":
                 {
-                    if(ResourcesManager.Instance._manaCount>10)
+                    if(ResourcesManager.Instance._manaCount>=10)
                         completeCheck = true;
                     break;
                 }
-                case "The King of the Goblins":
+                case "Fill Your Garden":
                 {
-                    if(GridManager.Instance.GetTileAtPosition(new Vector2(0,0))._hasCard)
+                    var isFull = true;
+                    for(int x = 0 ; x<GridManager.Instance.GetWidth() ; x++)
+                    {
+                        for(int y = 0 ; y<GridManager.Instance.GetHeight() ; y++)
+                        {
+                            if(!GridManager.Instance.GetTileAtPosition(new Vector2(x,y))._hasCard)
+                                isFull=false;
+                        }
+                    }
+                    if(isFull)
                         completeCheck = true;
                     break;
                 }
-                case "The Rose Knight":
+                case "Pick 15 Flowers":
                 {
-                    if(ResourcesManager.Instance._flowerCount>5)
+                    if(ResourcesManager.Instance._flowerCount>=15)
+                        completeCheck = true;
+                    break;
+                }
+                case "Grow Two Roses":
+                {
+                    if(GardenGrowthHistoryManager.Instance.GetCardCount("Fey Roses")>1)
                         completeCheck = true;
                     break;
                 }
             }
             return completeCheck;
         }
-        private void SetComplete()
+        private void SetComplete(int req)
         {
-            _requirementOneCheckbox.color = _completeColor;
-            _requirementTwoCheckbox.color = _completeColor;
-            _isComplete = true;
+            if(req == 1)
+            {
+                _requirementOneCheckbox.color = _completeColor;
+                _reqOneIsComplete = true;
+            }
+            else
+            {
+                _requirementTwoCheckbox.color = _completeColor;
+                _reqOneIsComplete = false;
+            }
         }
     }
 }

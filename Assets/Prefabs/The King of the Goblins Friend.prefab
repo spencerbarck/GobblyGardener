@@ -511,7 +511,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &6841378227922137831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,7 +553,7 @@ MonoBehaviour:
   _friendName: The King of the Goblins
   _friendSprite: {fileID: 21300000, guid: 3b8d71d279a1c4d40a734a126154eb6f, type: 3}
   _requirementOne: Pick 20 Flowers and 20 Food
-  _requirementTwo: 'Fill Your Garden '
+  _requirementTwo: Fill Your Garden
 --- !u!1 &6841378227927346352
 GameObject:
   m_ObjectHideFlags: 0
