@@ -8,8 +8,26 @@ namespace SB
     {
         [SerializeField] private SpriteRenderer _renderer;
         [SerializeField] private int _cardSlotNumber;
+        [SerializeField] private GameObject _cardSlotHatHighlight;
         public bool _hasCard;
+        private bool _hasHatHighlight;
         private Card _storedCard;
+        private void Start()
+        {
+            if(_cardSlotHatHighlight != null)
+            {
+                _hasHatHighlight = true;
+                _cardSlotHatHighlight.gameObject.SetActive(false);
+            }
+        }
+        public bool GetHasHatHighlight()
+        {
+            return _hasHatHighlight;
+        }
+        public void ActivateHatHighlight()
+        {
+            _cardSlotHatHighlight.gameObject.SetActive(true);
+        }
         public Card GetStoredCard()
         {
             return _storedCard;

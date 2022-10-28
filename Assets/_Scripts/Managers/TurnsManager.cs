@@ -40,6 +40,8 @@ namespace SB
             HandManager.Instance.DiscardHand();
             GameManager.Instance.SetGameState(GameState.PickingHand);
 
+            HandManager.Instance.ActivateHatHighlightOnSlot();
+
             GridManager.Instance.GardenStartTurn();
 
             ActionRecordingMananger.Instance.ResetActionsThisTurn();

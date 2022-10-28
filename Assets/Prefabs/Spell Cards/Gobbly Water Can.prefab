@@ -580,7 +580,7 @@ MonoBehaviour:
   _growthCostText: {fileID: 1786865431298539144}
   _rulesText: {fileID: 440065201732434537}
   _cardWitherImage: {fileID: 7687290516169925507}
-  _cardManaCost: 1
+  _cardManaCost: 2
   _cardGrowthCost: 0
   _foodYeild: 0
   _flowerYeild: 0

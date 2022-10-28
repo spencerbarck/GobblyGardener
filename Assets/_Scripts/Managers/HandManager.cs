@@ -11,7 +11,7 @@ namespace SB
         {
             Instance = this;
         }
-        [SerializeField] List<CardSlot> _cardSlots;
+        [SerializeField] private List<CardSlot> _cardSlots;
         public Card _cardSelected;
         public List<Card> _hand = new List<Card>();
         private int _maxHandSize = 5;
@@ -26,6 +26,13 @@ namespace SB
             var gardenCards = _maxHandSize - spellCards;
             if((spellCards+gardenCards) >_maxHandSize)
                 return;
+
+            if(TurnsManager.Instance.GetCurrentTurnType()=="Growing")
+            {
+                AddCardToHandSlot(HatManager.Instance.GetCardInPlayerHat(),_cardSlots[0]);
+                spellCards--;
+            }
+
             for(int i = 0; i<_cardSlots.Count ; i++)
             {
                 if((!_cardSlots[i]._hasCard)&&(spellCards>0))
@@ -103,9 +110,7 @@ namespace SB
 
                         CardSlot cardSlot = _cardSlots[i];
 
-                        cardDrawn.transform.position = cardSlot.transform.position;
-                        cardSlot.StoreACard(cardDrawn);
-                        _hand.Add(cardDrawn);
+                        AddCardToHandSlot(cardDrawn,cardSlot);
                         ActionRecordingMananger.Instance.RecordCardDrawnThisTurn();
                         return;
                     }
@@ -126,18 +131,18 @@ namespace SB
                 {
                     if(!_cardSlots[i]._hasCard)
                     {
-                        Card cardDrawn = SpellDeckManager.Instance.PullTopCard();
-
-                        CardSlot cardSlot = _cardSlots[i];
-                        
-                        cardDrawn.transform.position = cardSlot.transform.position;
-                        cardSlot.StoreACard(cardDrawn);
-                        _hand.Add(cardDrawn);
+                        AddCardToHandSlot(SpellDeckManager.Instance.PullTopCard(),_cardSlots[i]);
                         ActionRecordingMananger.Instance.RecordCardDrawnThisTurn();
                         return;
                     }
                 }
             }
+        }
+        private void AddCardToHandSlot(Card card, CardSlot cardSlot)
+        {
+            _hand.Add(card);
+            cardSlot.StoreACard(card);
+            card.transform.position = cardSlot.transform.position;
         }
         public void DiscardHand()
         {
@@ -166,6 +171,10 @@ namespace SB
             {
                 SpellHistoryManager.Instance.AddToSpellHistory(card);
             }
+        }
+        public void ActivateHatHighlightOnSlot()
+        {
+            _cardSlots[0].ActivateHatHighlight();
         }
     }
 }
