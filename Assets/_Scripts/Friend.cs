@@ -88,6 +88,12 @@ namespace SB
                         completeCheck = true;
                     break;
                 }
+                case "Draw 8 Cards in a Single Turn":
+                {
+                    if(ActionRecordingMananger.Instance.GetCardsDrawnThisTurn()>5)
+                        completeCheck = true;
+                    break;
+                }
             }
             return completeCheck;
         }

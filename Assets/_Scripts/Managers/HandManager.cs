@@ -106,6 +106,7 @@ namespace SB
                         cardDrawn.transform.position = cardSlot.transform.position;
                         cardSlot.StoreACard(cardDrawn);
                         _hand.Add(cardDrawn);
+                        ActionRecordingMananger.Instance.RecordCardDrawnThisTurn();
                         return;
                     }
                 }
@@ -132,6 +133,7 @@ namespace SB
                         cardDrawn.transform.position = cardSlot.transform.position;
                         cardSlot.StoreACard(cardDrawn);
                         _hand.Add(cardDrawn);
+                        ActionRecordingMananger.Instance.RecordCardDrawnThisTurn();
                         return;
                     }
                 }
