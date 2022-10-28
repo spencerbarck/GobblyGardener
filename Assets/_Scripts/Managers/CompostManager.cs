@@ -37,5 +37,18 @@ namespace SB
             }
             GardenDeckManager.Instance.ShuffleDeck();
         }
+        public Card PullTopOfCompost()
+        {
+            if(_topOfCompost != null)
+            {
+                var topOfCompostReturn = _topOfCompost;
+                _compostList.Remove(topOfCompostReturn);
+                _topOfCompost = _compostList[_compostList.Count-1];
+                _topOfCompost.gameObject.SetActive(true);
+                return topOfCompostReturn;
+            }
+            else 
+                return null;
+        }
     }
 }

@@ -580,20 +580,22 @@ MonoBehaviour:
   _growthCostText: {fileID: 1786865431298539144}
   _rulesText: {fileID: 440065201732434537}
   _cardWitherImage: {fileID: 7501800698543004546}
-  _cardManaCost: 0
+  _cardManaCost: 3
   _cardGrowthCost: 0
   _foodYeild: 0
   _flowerYeild: 0
   _manaYeild: 0
   _dryColor: {r: 0.39215687, g: 0.25912407, b: 0.49019608, a: 1}
   _wateredColor: {r: 0, g: 0, b: 0, a: 0}
-  _cardName: Blink Gloves
+  _cardName: Doubling Harvest
   _cardRulesText: Double a Plants Harvest this turn
-  _cardSprite: {fileID: 21300000, guid: 0e137a0ce61d689479579b4ce44d8e0b, type: 3}
+  _cardSprite: {fileID: 21300000, guid: 7f5f868bb92fd5e4ea4bcd9a3b956184, type: 3}
   _cardBaseImage: {fileID: 3424350679945073107}
   _cardHighlightImage: {fileID: 2681291910338739265}
   _cardBackSpriteRenderer: {fileID: 3652784755321740072}
   _highlight: {fileID: 4046226622406558708}
+  _canWither: 1
+  _doubleHarvest: 1
   _cardTile: {fileID: 0}
 --- !u!61 &8306015245685303153
 BoxCollider2D:

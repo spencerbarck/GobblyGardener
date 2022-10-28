@@ -90,7 +90,13 @@ namespace SB
                 }
                 case "Draw 8 Cards in a Single Turn":
                 {
-                    if(ActionRecordingMananger.Instance.GetCardsDrawnThisTurn()>5)
+                    if(ActionRecordingMananger.Instance.GetCardsDrawnThisTurn()>7)
+                        completeCheck = true;
+                    break;
+                }
+                case "Pick 20 Flowers and 20 Food":
+                {
+                    if((ResourcesManager.Instance._flowerCount>=20)&&(ResourcesManager.Instance._foodCount>=20))
                         completeCheck = true;
                     break;
                 }

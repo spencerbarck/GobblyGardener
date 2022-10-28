@@ -41,6 +41,7 @@ namespace SB
         private bool _isGrown;
         private bool _needsWater = true;
         [HideInInspector] public bool _canWither = true;
+        [HideInInspector] public bool _doubleHarvest = true;
         private float _cardZValue = -0.001f;
         private int _witherCount;
         private int _maxWither = 2;
@@ -256,6 +257,11 @@ namespace SB
             ResourcesManager.Instance._flowerCount += _flowerYeild;
             ResourcesManager.Instance._foodCount += _foodYeild;
             ResourcesManager.Instance._manaCount += _manaYeild;
+            if(_doubleHarvest)
+            {
+                _doubleHarvest = false;
+                OnHarvest();
+            }
         }
         public void OnPlay()
         {
@@ -265,6 +271,11 @@ namespace SB
                 {
                     HandManager.Instance.DrawSpellCard();
                     HandManager.Instance.DrawSpellCard();
+                    break;
+                }
+                case "Green Thumb":
+                {
+                    HandManager.Instance.DrawGardenCard();
                     break;
                 }
                 default:
@@ -333,6 +344,25 @@ namespace SB
                 case "Gardeners Miracle":
                 {
                     tile.WaterCardOnTile();
+                    break;
+                }
+                case "Instant Growth":
+                {
+                    tile.PeekTileCard()._cardGrowthCost=0;
+                    tile.PeekTileCard().UpdateCardUIElements();
+                    break;
+                }
+                case "Doubling Harvest":
+                {
+                    tile.PeekTileCard()._doubleHarvest = true;
+                    break;
+                }
+                case "Back from the Compost":
+                {
+                    var compostCard = CompostManager.Instance.PullTopOfCompost();
+                    tile.SetTileCard(compostCard);
+                    compostCard._cardTile = tile;
+                    compostCard.transform.position = tile.transform.position;
                     break;
                 }
                 default:
