@@ -408,6 +408,16 @@ namespace SB
                             GridManager.Instance.GetAdjacentTiles(this._cardTile,0,1).PeekTileCard()._canWither=false;
                     break;
                 }
+                case "Lotus of the Void":
+                {
+                    ResourcesManager.Instance._manaCount += 3;
+                    InitCard();
+                    _cardTile.RemoveTileCard();
+                    _cardTile=null;
+                    transform.position = CompostManager.Instance.GetCompostTransform().position;
+                    CompostManager.Instance.AddToCompost(this);
+                    break;
+                }
                 default:
                 {
                     break;
