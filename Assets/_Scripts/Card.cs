@@ -35,13 +35,19 @@ namespace SB
         [SerializeField] private GameObject _cardHighlightImage;
         [SerializeField] private SpriteRenderer _cardBackSpriteRenderer;
         [SerializeField] private GameObject _highlight;
+        //
+        //Flags
+        //
         private bool _isSelected;
         private bool _isEnlarged;
         private bool _isWatered;
         private bool _isGrown;
+        private bool _doubleHarvest;
         private bool _needsWater = true;
-        [HideInInspector] public bool _canWither = true;
-        [HideInInspector] public bool _doubleHarvest = true;
+        private bool _canWither = true;
+        //
+        //Numeric Attributes
+        //
         private float _cardZValue = -0.001f;
         private int _witherCount;
         private int _maxWither = 2;
@@ -193,21 +199,6 @@ namespace SB
         //
         //Card Watering / Harvesting
         //
-        public void WaterCard()
-        {
-            OnWater();
-        }
-        private void DryCard()
-        {
-            _isWatered = false;
-            _canWither = true;
-            _waterCount = 0;
-            if(!_needsWater)
-                return;
-            
-            _cardBackSpriteRenderer.color = _dryColor;
-            _cardBaseImage.GetComponent<Image>().color = _dryColor;
-        }
         public void HarvestCard()
         {
             if((_isWatered)||(!_needsWater))
@@ -232,6 +223,17 @@ namespace SB
                 WitherCard(1);
             }
             DryCard();
+        }
+        private void DryCard()
+        {
+            _isWatered = false;
+            _canWither = true;
+            _waterCount = 0;
+            if(!_needsWater)
+                return;
+            
+            _cardBackSpriteRenderer.color = _dryColor;
+            _cardBaseImage.GetComponent<Image>().color = _dryColor;
         }
         private void WitherCard(int witherAmount)
         {
@@ -286,7 +288,7 @@ namespace SB
             if(this._cardType == CardType.Spell)
                 SpellHistoryManager.Instance.AddToSpellHistory(this);
         }
-        private void OnWater()
+        public void OnWater()
         {
             switch(_cardName)
             {

@@ -84,7 +84,7 @@ namespace SB
                 }
                 case "Grow Two Roses":
                 {
-                    if(GardenGrowthHistoryManager.Instance.GetCardCount("Fey Roses")>1)
+                    if(GardenGrowthHistoryManager.Instance.FindCountOfCardName("Fey Roses")>1)
                         completeCheck = true;
                     break;
                 }

@@ -55,7 +55,10 @@ namespace SB
         }
         private void OnMouseDown()
         {
+            if(_hasCard)
+                return;
             //Movement
+            //Move the chosen card to an empty tile
             if((GardenMovementManager.Instance._isMoving)&&(_tileCard==null))
             {
                 GardenMovementManager.Instance.PlaceGardenCardToMove(this);
@@ -94,7 +97,7 @@ namespace SB
         public void WaterCardOnTile()
         {
             if(_tileCard!=null)
-                _tileCard.WaterCard();
+                _tileCard.OnWater();
         }
     }
 }
