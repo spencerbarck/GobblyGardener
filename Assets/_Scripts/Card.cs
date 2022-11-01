@@ -205,8 +205,14 @@ namespace SB
             {
                 if(_cardGrowthCost>0)
                 {
-                    _cardGrowthCost--;
-                    UpdateCardUIElements();
+                    if(SeasonsMananger.Instance.GetCurrentSeason()!=Season.Winter)
+                    {
+                        _cardGrowthCost--;
+                        if((SeasonsMananger.Instance.GetCurrentSeason()==Season.Summer)&&(_cardGrowthCost>0))
+                            _cardGrowthCost--;
+
+                        UpdateCardUIElements();
+                    }
                 }
                 else
                 {
@@ -256,9 +262,23 @@ namespace SB
         //
         private void OnHarvest()
         {
+            ResourcesManager.Instance._manaCount += _manaYeild;
+            if(SeasonsMananger.Instance.GetCurrentSeason()==Season.Winter)
+            {
+                return;
+            }
+            if(SeasonsMananger.Instance.GetCurrentSeason()==Season.Spring)
+                ResourcesManager.Instance._flowerCount += _flowerYeild;
+
+            if(SeasonsMananger.Instance.GetCurrentSeason()==Season.Fall)
+            {
+                ResourcesManager.Instance._manaCount += _manaYeild;
+                ResourcesManager.Instance._foodCount += _foodYeild;
+            }
+
+
             ResourcesManager.Instance._flowerCount += _flowerYeild;
             ResourcesManager.Instance._foodCount += _foodYeild;
-            ResourcesManager.Instance._manaCount += _manaYeild;
             if(_doubleHarvest)
             {
                 _doubleHarvest = false;

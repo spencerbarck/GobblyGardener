@@ -35,15 +35,14 @@ namespace SB
             {
                 ResourcesManager.Instance._manaCount=0;
                 GridManager.Instance.HarvestGarden();
+                SeasonsMananger.Instance.ChangeToNextSeason();
             }
             _currentTurn++;
+
             HandManager.Instance.DiscardHand();
-            GameManager.Instance.SetGameState(GameState.PickingHand);
-
             HandManager.Instance.ActivateHatHighlightOnSlot();
-
+            GameManager.Instance.SetGameState(GameState.PickingHand);
             GridManager.Instance.GardenStartTurn();
-
             ActionRecordingMananger.Instance.ResetActionsThisTurn();
         }
     }
