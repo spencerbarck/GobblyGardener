@@ -35,7 +35,8 @@ namespace SB
             {
                 ResourcesManager.Instance._manaCount=0;
                 GridManager.Instance.HarvestGarden();
-                SeasonsMananger.Instance.ChangeToNextSeason();
+                if(_currentTurn%4==0)
+                    SeasonsMananger.Instance.ChangeToNextSeason();
             }
             _currentTurn++;
 

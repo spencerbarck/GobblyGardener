@@ -185,8 +185,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _baseColor: {r: 1, g: 1, b: 1, a: 1}
   _offsetColor: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
-  _renderer: {fileID: 919465588692246821}
+  _tileSpriteRenderer: {fileID: 919465588692246821}
   _highlight: {fileID: 749100009058333867}
+  _tileX: 0
+  _tileY: 0
+  _isHover: 0
+  _hasCard: 0
 --- !u!61 &6230957273210883273
 BoxCollider2D:
   m_ObjectHideFlags: 0

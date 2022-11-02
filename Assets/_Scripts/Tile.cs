@@ -7,13 +7,13 @@ namespace SB
     public class Tile : MonoBehaviour
     {
         [SerializeField] private Color _baseColor, _offsetColor;
-        [SerializeField] private SpriteRenderer _renderer;
+        [SerializeField] private SpriteRenderer _tileSpriteRenderer;
         [SerializeField] private GameObject _highlight;
-        public bool _hasCard;
         private Card _tileCard;
         public int _tileX;
         public int _tileY;
         public bool _isHover;
+        public bool _hasCard;
         private void Update()
         {
             if(_isHover)
@@ -27,13 +27,13 @@ namespace SB
         }
         public void Init(bool isOffset,int tileX,int tileY)
         {
-            _renderer.color = isOffset ? _offsetColor : _baseColor;
+            _tileSpriteRenderer.color = isOffset ? _offsetColor : _baseColor;
             _tileX=tileX;
             _tileY=tileY;
         }
         public SpriteRenderer GetSpriteRenderer()
         {
-            return _renderer;
+            return _tileSpriteRenderer;
         }
         private void OnMouseEnter()
         {

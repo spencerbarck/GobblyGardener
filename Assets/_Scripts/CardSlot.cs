@@ -20,10 +20,6 @@ namespace SB
                 _cardSlotHatHighlight.gameObject.SetActive(false);
             }
         }
-        public bool GetHasHatHighlight()
-        {
-            return _hasHatHighlight;
-        }
         public void ActivateHatHighlight()
         {
             _cardSlotHatHighlight.gameObject.SetActive(true);

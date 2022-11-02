@@ -76,13 +76,14 @@ namespace SB
             _witherCount = 0;
             _needsWater = true;
             _canWither = true;
+
+            _cardBaseImage.SetActive(false);
+            _cardHighlightImage.SetActive(false);
             UpdateCardUIElements();
             DryCard();
         }
         public void UpdateCardUIElements()
         {
-            _cardBaseImage.SetActive(false);
-            _cardHighlightImage.SetActive(false);
             _nameText.text = _cardName;
 
             _cardImage.sprite = _cardSprite;
@@ -96,11 +97,15 @@ namespace SB
             if(_cardType==CardType.Garden)
             {
                 _manaCostText.text = "";
-                if(_cardGrowthCost==1)
-                    _growthCostText.text = _cardGrowthCost.ToString() + " Turn To Grow";
+                if(_isGrown)
+                    _growthCostText.text = "Fully Grown";
                 else
-                    _growthCostText.text = _cardGrowthCost.ToString() + " Turns To Grow";
-                
+                {
+                    if(_cardGrowthCost+1==1)
+                        _growthCostText.text = (_cardGrowthCost+1).ToString() + " Turn To Grow";
+                    else
+                        _growthCostText.text = (_cardGrowthCost+1).ToString() + " Turns To Grow";
+                }
             }
             else
             {
@@ -220,6 +225,7 @@ namespace SB
                     {
                         _isGrown = true;
                         GardenGrowthHistoryManager.Instance.AddCard(this);
+                        UpdateCardUIElements();
                     }
                     OnHarvest();
                 }
