@@ -580,11 +580,13 @@ MonoBehaviour:
   _growthCostText: {fileID: 1786865431298539144}
   _rulesText: {fileID: 440065201732434537}
   _cardWitherImage: {fileID: 7501800698543004546}
+  _turnsLeftText: {fileID: 0}
   _cardManaCost: 0
   _cardGrowthCost: 0
   _foodYeild: 0
   _flowerYeild: 0
   _manaYeild: 0
+  _turnsLeftDefault: 0
   _dryColor: {r: 0.39215687, g: 0.25912407, b: 0.49019608, a: 1}
   _wateredColor: {r: 0, g: 0, b: 0, a: 0}
   _cardName: Blink Gloves

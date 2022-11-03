@@ -18,12 +18,15 @@ namespace SB
         [SerializeField] private TextMeshProUGUI _growthCostText;
         [SerializeField] private TextMeshProUGUI _rulesText;
         [SerializeField] private Image _cardWitherImage;
+        [SerializeField] private TextMeshProUGUI _turnsLeftText;
         [Header("Resource Settings")]
         [SerializeField] public int _cardManaCost;
         [SerializeField] public int _cardGrowthCost;
         [SerializeField] public int _foodYeild;
         [SerializeField] public int _flowerYeild;
         [SerializeField] public int _manaYeild;
+        [SerializeField] public int _turnsLeftDefault;
+        private int _turnsLeftCurrent;
 
         [Header("Appearance Settings")]
         [SerializeField] private Color _dryColor;
@@ -76,6 +79,7 @@ namespace SB
             _witherCount = 0;
             _needsWater = true;
             _canWither = true;
+            _turnsLeftCurrent = _turnsLeftDefault;
 
             _cardBaseImage.SetActive(false);
             _cardHighlightImage.SetActive(false);
@@ -97,6 +101,8 @@ namespace SB
             if(_cardType==CardType.Garden)
             {
                 _manaCostText.text = "";
+                if(_turnsLeftText!=null) _turnsLeftText.text = _turnsLeftCurrent + "/" + _turnsLeftDefault;
+
                 if(_isGrown)
                     _growthCostText.text = "Fully Grown";
                 else
@@ -227,6 +233,11 @@ namespace SB
                         GardenGrowthHistoryManager.Instance.AddCard(this);
                         UpdateCardUIElements();
                     }
+                    else
+                    {
+                        ReduceTurnsLeft();
+                        UpdateCardUIElements();
+                    }
                     OnHarvest();
                 }
             }
@@ -262,6 +273,21 @@ namespace SB
                 CompostManager.Instance.AddToCompost(this);
             }
             UpdateCardUIElements();
+        }
+        private void ReduceTurnsLeft()
+        {
+            if(_turnsLeftCurrent == 1)
+            {
+                InitCard();
+                _cardTile.RemoveTileCard();
+                _cardTile=null;
+                transform.position = CompostManager.Instance.GetCompostTransform().position;
+                CompostManager.Instance.AddToCompost(this);
+            }
+            else
+            {
+                _turnsLeftCurrent--;
+            }
         }
         //
         //Card Behavior

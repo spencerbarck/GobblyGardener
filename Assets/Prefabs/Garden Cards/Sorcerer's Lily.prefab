@@ -733,11 +733,13 @@ MonoBehaviour:
   _growthCostText: {fileID: 1786865431298539144}
   _rulesText: {fileID: 440065201732434537}
   _cardWitherImage: {fileID: 8768196710806755533}
+  _turnsLeftText: {fileID: 0}
   _cardManaCost: 0
   _cardGrowthCost: 2
   _foodYeild: 0
   _flowerYeild: 1
   _manaYeild: 3
+  _turnsLeftDefault: 0
   _dryColor: {r: 0.49056602, g: 0.22816822, b: 0.057386946, a: 1}
   _wateredColor: {r: 0.33962262, g: 0.1569604, b: 0.039729424, a: 1}
   _cardName: Sorcerer's Lily
