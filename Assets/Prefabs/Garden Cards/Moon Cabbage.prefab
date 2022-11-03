@@ -726,7 +726,7 @@ MonoBehaviour:
   _dryColor: {r: 0.49056602, g: 0.22816822, b: 0.057386946, a: 1}
   _wateredColor: {r: 0.33962262, g: 0.1569604, b: 0.039729424, a: 1}
   _cardName: Moon Cabbage
-  _cardRulesText: Grows One Food
+  _cardRulesText: Yeilds Two Mana      Grows One Food
   _cardSprite: {fileID: 21300000, guid: 7ac5d65f1802bfc459230124f26baa89, type: 3}
   _cardBaseImage: {fileID: 3424350679945073107}
   _cardHighlightImage: {fileID: 2681291910338739265}

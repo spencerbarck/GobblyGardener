@@ -294,23 +294,19 @@ namespace SB
         //
         private void OnHarvest()
         {
-            ResourcesManager.Instance._manaCount += _manaYeild;
-            if(SeasonsMananger.Instance.GetCurrentSeason()==Season.Winter)
-            {
-                return;
-            }
-            if(SeasonsMananger.Instance.GetCurrentSeason()==Season.Spring)
-                ResourcesManager.Instance._flowerCount += _flowerYeild;
+            var manaMultiplier = 1f;
+            var flowerMultiplier = 1f;
+            var foodMultiplier = 1f;
+            if(SeasonsMananger.Instance.GetCurrentSeason()==Season.Winter) manaMultiplier = 1.5f;
+            if(SeasonsMananger.Instance.GetCurrentSeason()==Season.Spring) flowerMultiplier = 1.5f;
+            if(SeasonsMananger.Instance.GetCurrentSeason()==Season.Fall) foodMultiplier = 1.5f;
 
-            if(SeasonsMananger.Instance.GetCurrentSeason()==Season.Fall)
-            {
-                ResourcesManager.Instance._manaCount += _manaYeild;
-                ResourcesManager.Instance._foodCount += _foodYeild;
-            }
-
-
-            ResourcesManager.Instance._flowerCount += _flowerYeild;
-            ResourcesManager.Instance._foodCount += _foodYeild;
+            var manaCount = (_manaYeild*manaMultiplier);
+            ResourcesManager.Instance._manaCount += (int)manaCount;
+            var flowerCount = (_flowerYeild*flowerMultiplier);
+            ResourcesManager.Instance._flowerCount += (int)flowerCount;
+            var foodCount = (_foodYeild*foodMultiplier);
+            ResourcesManager.Instance._foodCount += (int)foodCount;
             if(_doubleHarvest)
             {
                 _doubleHarvest = false;
@@ -330,6 +326,11 @@ namespace SB
                 case "Green Thumb":
                 {
                     HandManager.Instance.DrawGardenCard();
+                    break;
+                }
+                case "Blink Gloves":
+                {
+                    ResourcesManager.Instance._manaCount++;
                     break;
                 }
                 default:
@@ -403,6 +404,7 @@ namespace SB
                 case "Instant Growth":
                 {
                     tile.PeekTileCard()._cardGrowthCost=0;
+                    tile.PeekTileCard()._isGrown=true;
                     tile.PeekTileCard().UpdateCardUIElements();
                     break;
                 }
