@@ -663,12 +663,13 @@ MonoBehaviour:
   _cardGrowthCost: 1
   _foodYeild: 0
   _flowerYeild: 1
-  _manaYeild: 2
-  _turnsLeftDefault: 2
+  _manaYeild: 0
+  _turnsLeftDefault: 4
   _dryColor: {r: 0.49056602, g: 0.22816822, b: 0.057386946, a: 1}
   _wateredColor: {r: 0.33962262, g: 0.1569604, b: 0.039729424, a: 1}
   _cardName: Prickle Bulb
-  _cardRulesText: Yeilds One Mana      Grows One Flower
+  _cardRulesText: 'Grows One Food     Arcane Spine: Once grown only needs to be watered
+    once'
   _cardSprite: {fileID: 21300000, guid: 8849f990fcce5194ca8e1d358771e66a, type: 3}
   _cardBaseImage: {fileID: 3424350679945073107}
   _cardHighlightImage: {fileID: 2681291910338739265}

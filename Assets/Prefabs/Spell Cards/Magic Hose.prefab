@@ -658,7 +658,7 @@ MonoBehaviour:
   _rulesText: {fileID: 440065201732434537}
   _cardWitherImage: {fileID: 2448204167242727017}
   _turnsLeftText: {fileID: 0}
-  _cardManaCost: 1
+  _cardManaCost: 2
   _cardGrowthCost: 0
   _foodYeild: 0
   _flowerYeild: 0

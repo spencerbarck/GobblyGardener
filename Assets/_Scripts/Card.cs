@@ -192,17 +192,41 @@ namespace SB
         public void EnlargeCard()
         {
             _isEnlarged = true;
-            transform.localScale = transform.localScale*2;
+            //transform.localScale = transform.localScale*2;
             _cardCanvas.sortingOrder = 17;
-            
+
+            if(_cardTile==null)
+            {
+                transform.localScale = transform.localScale*2;
+            }
+            else
+            {
+                _cardBaseImage.transform.Translate(Vector3.right*2.5f);
+                _cardHighlightImage.transform.Translate(Vector3.right*2.5f);
+                _cardBaseImage.transform.localScale = _cardBaseImage.transform.localScale*2;
+                _cardHighlightImage.transform.localScale = _cardHighlightImage.transform.localScale*2;
+            }
+
             _cardBaseImage.SetActive(true);
             _cardHighlightImage.SetActive(true);
         }
         public void UnenlargeCard()
         {
             _isEnlarged = false;
-            transform.localScale = transform.localScale/2;
+            //transform.localScale = transform.localScale/2;
             _cardCanvas.sortingOrder = 16;
+
+            if(_cardTile==null)
+            {
+                transform.localScale = transform.localScale/2;
+            }
+            else
+            {
+                _cardBaseImage.transform.Translate(Vector3.left*2.5f);
+                _cardHighlightImage.transform.Translate(Vector3.left*2.5f);
+                _cardBaseImage.transform.localScale = _cardBaseImage.transform.localScale/2;
+                _cardHighlightImage.transform.localScale = _cardHighlightImage.transform.localScale/2;
+            }
 
             _cardBaseImage.SetActive(false);
             _cardHighlightImage.SetActive(false);
@@ -227,6 +251,7 @@ namespace SB
                 }
                 else
                 {
+                    ReduceTurnsLeft();
                     if(!_isGrown)
                     {
                         _isGrown = true;
@@ -235,7 +260,6 @@ namespace SB
                     }
                     else
                     {
-                        ReduceTurnsLeft();
                         UpdateCardUIElements();
                     }
                     OnHarvest();
@@ -348,6 +372,12 @@ namespace SB
                 case "Arcane Succulent":
                 {
                     _needsWater = false;
+                    break;
+                }
+                case "Prickle Bulb":
+                {
+                    if(_isGrown)
+                        _needsWater = false;
                     break;
                 }
                 case "Greedy Dragondil":
