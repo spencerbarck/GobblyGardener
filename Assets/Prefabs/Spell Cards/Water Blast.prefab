@@ -650,6 +650,7 @@ MonoBehaviour:
   _cardType: 1
   _cardTileSelectionType: 0
   _cardCanvas: {fileID: 2419358328195788659}
+  _cardCanvasRightShift: {fileID: 0}
   _nameText: {fileID: 4054097244383346193}
   _manaCostText: {fileID: 517001538570171978}
   _cardImage: {fileID: 1094143204839780389}

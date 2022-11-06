@@ -12,13 +12,19 @@ namespace SB
         public TileSelectionType _cardTileSelectionType;
         [Header("UI Settings")]
         [SerializeField] private Canvas _cardCanvas;
+        [SerializeField] private Image _cardImage;
+        [SerializeField] private Image _cardWitherImage;
         [SerializeField] private TextMeshProUGUI _nameText;
         [SerializeField] private TextMeshProUGUI _manaCostText;
-        [SerializeField] private Image _cardImage;
         [SerializeField] private TextMeshProUGUI _growthCostText;
         [SerializeField] private TextMeshProUGUI _rulesText;
-        [SerializeField] private Image _cardWitherImage;
         [SerializeField] private TextMeshProUGUI _turnsLeftText;
+        [Header("UI In Garden Settings")]
+        [SerializeField] private Canvas _cardCanvasInGarden;
+        [SerializeField] private Image _cardImageInGarden;
+        [SerializeField] private Image _cardWitherImageInGarden;
+        [SerializeField] private Image _cardManaImageInGarden;
+        [SerializeField] private Image _cardHarvestImageInGarden;
         [Header("Resource Settings")]
         [SerializeField] public int _cardManaCost;
         [SerializeField] public int _cardGrowthCost;
@@ -201,10 +207,12 @@ namespace SB
             }
             else
             {
-                _cardBaseImage.transform.Translate(Vector3.right*2.5f);
-                _cardHighlightImage.transform.Translate(Vector3.right*2.5f);
-                _cardBaseImage.transform.localScale = _cardBaseImage.transform.localScale*2;
-                _cardHighlightImage.transform.localScale = _cardHighlightImage.transform.localScale*2;
+                //_cardBaseImage.transform.Translate(Vector3.right*2.5f);
+                //_cardHighlightImage.transform.Translate(Vector3.right*2.5f);
+                _cardCanvas.gameObject.transform.Translate(Vector3.right*2.5f);
+                //_cardBaseImage.transform.localScale = _cardBaseImage.transform.localScale*2;
+                //_cardHighlightImage.transform.localScale = _cardHighlightImage.transform.localScale*2;
+                _cardCanvas.gameObject.transform.localScale = _cardCanvas.gameObject.transform.localScale*2;
             }
 
             _cardBaseImage.SetActive(true);
@@ -222,10 +230,12 @@ namespace SB
             }
             else
             {
-                _cardBaseImage.transform.Translate(Vector3.left*2.5f);
-                _cardHighlightImage.transform.Translate(Vector3.left*2.5f);
-                _cardBaseImage.transform.localScale = _cardBaseImage.transform.localScale/2;
-                _cardHighlightImage.transform.localScale = _cardHighlightImage.transform.localScale/2;
+                //_cardBaseImage.transform.Translate(Vector3.left*2.5f);
+                //_cardHighlightImage.transform.Translate(Vector3.left*2.5f);
+                _cardCanvas.gameObject.transform.transform.Translate(Vector3.left*2.5f);
+                //_cardBaseImage.transform.localScale = _cardBaseImage.transform.localScale/2;
+                //_cardHighlightImage.transform.localScale = _cardHighlightImage.transform.localScale/2;
+                _cardCanvas.gameObject.transform.localScale = _cardCanvas.gameObject.transform.localScale/2;
             }
 
             _cardBaseImage.SetActive(false);
