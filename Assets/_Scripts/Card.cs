@@ -42,8 +42,9 @@ namespace SB
         [SerializeField] public Sprite _cardSprite;
         [SerializeField] private GameObject _cardBaseImage;
         [SerializeField] private GameObject _cardHighlightImage;
-        [SerializeField] private SpriteRenderer _cardBackSpriteRenderer;
         [SerializeField] private GameObject _highlight;
+        [SerializeField] private SpriteRenderer _cardBackSpriteRenderer;
+        [SerializeField] private SpriteRenderer _cardBackSpriteRendererInGarden;
         //
         //Flags
         //
@@ -66,6 +67,8 @@ namespace SB
         private void Start()
         {
             InitCard();
+            
+            if(_cardBackSpriteRendererInGarden!=null)_cardBackSpriteRendererInGarden.enabled = false;
         }
         private void Update()
         {
@@ -207,11 +210,8 @@ namespace SB
             }
             else
             {
-                //_cardBaseImage.transform.Translate(Vector3.right*2.5f);
-                //_cardHighlightImage.transform.Translate(Vector3.right*2.5f);
+                _cardCanvas.gameObject.SetActive(true);
                 _cardCanvas.gameObject.transform.Translate(Vector3.right*2.5f);
-                //_cardBaseImage.transform.localScale = _cardBaseImage.transform.localScale*2;
-                //_cardHighlightImage.transform.localScale = _cardHighlightImage.transform.localScale*2;
                 _cardCanvas.gameObject.transform.localScale = _cardCanvas.gameObject.transform.localScale*2;
             }
 
@@ -230,11 +230,8 @@ namespace SB
             }
             else
             {
-                //_cardBaseImage.transform.Translate(Vector3.left*2.5f);
-                //_cardHighlightImage.transform.Translate(Vector3.left*2.5f);
+                _cardCanvas.gameObject.SetActive(false);
                 _cardCanvas.gameObject.transform.transform.Translate(Vector3.left*2.5f);
-                //_cardBaseImage.transform.localScale = _cardBaseImage.transform.localScale/2;
-                //_cardHighlightImage.transform.localScale = _cardHighlightImage.transform.localScale/2;
                 _cardCanvas.gameObject.transform.localScale = _cardCanvas.gameObject.transform.localScale/2;
             }
 
@@ -418,6 +415,11 @@ namespace SB
                 tile.SetTileCard(this);
                 _cardTile = tile;
                 transform.position = tile.transform.position;
+                _cardBackSpriteRenderer.enabled = false;
+                _cardCanvas.gameObject.SetActive(false);
+
+                _cardBackSpriteRendererInGarden.enabled = true;
+                _cardCanvasInGarden.gameObject.SetActive(true);
             }
             switch(_cardName)
             {

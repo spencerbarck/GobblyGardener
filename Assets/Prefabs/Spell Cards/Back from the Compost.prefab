@@ -574,14 +574,18 @@ MonoBehaviour:
   _cardType: 1
   _cardTileSelectionType: 0
   _cardCanvas: {fileID: 2419358328195788659}
-  _cardCanvasRightShift: {fileID: 0}
+  _cardImage: {fileID: 1094143204839780389}
+  _cardWitherImage: {fileID: 7501800698543004546}
   _nameText: {fileID: 4054097244383346193}
   _manaCostText: {fileID: 517001538570171978}
-  _cardImage: {fileID: 1094143204839780389}
   _growthCostText: {fileID: 1786865431298539144}
   _rulesText: {fileID: 440065201732434537}
-  _cardWitherImage: {fileID: 7501800698543004546}
   _turnsLeftText: {fileID: 0}
+  _cardCanvasInGarden: {fileID: 0}
+  _cardImageInGarden: {fileID: 0}
+  _cardWitherImageInGarden: {fileID: 0}
+  _cardManaImageInGarden: {fileID: 0}
+  _cardHarvestImageInGarden: {fileID: 0}
   _cardManaCost: 1
   _cardGrowthCost: 0
   _foodYeild: 0
@@ -595,8 +599,9 @@ MonoBehaviour:
   _cardSprite: {fileID: 21300000, guid: 81c58860bed07f443bc4f2b2c2ec807b, type: 3}
   _cardBaseImage: {fileID: 3424350679945073107}
   _cardHighlightImage: {fileID: 2681291910338739265}
-  _cardBackSpriteRenderer: {fileID: 3652784755321740072}
   _highlight: {fileID: 4046226622406558708}
+  _cardBackSpriteRenderer: {fileID: 3652784755321740072}
+  _cardBackSpriteRendererInGarden: {fileID: 0}
   _cardTile: {fileID: 0}
 --- !u!61 &8306015245685303153
 BoxCollider2D:

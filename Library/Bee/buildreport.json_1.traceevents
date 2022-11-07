@@ -1,0 +1,624 @@
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
+{ "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 0, "tid": 1, "ts": 1667794285071062, "dur": 778082, "ph": "X", "name": "Build Player", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1667794285071213, "dur": 2738, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1667794285073953, "dur": 12124, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1667794285086079, "dur": 215183, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1667794285301264, "dur": 546617, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1667794285847883, "dur": 1260, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1667794285849565, "dur": 10, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "netcorerun.dll" } },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-1" } },
+{ "pid": 35942, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 35942, "tid": 1, "ts": 1667794285145623, "dur": 147061, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1667794285146347, "dur": 26218, "ph": "X", "name": "BuildProgramContextConstructor", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1667794285278443, "dur": 4772, "ph": "X", "name": "OutputData.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1667794285283218, "dur": 9460, "ph": "X", "name": "Backend.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1667794285283683, "dur": 6375, "ph": "X", "name": "JsonToString", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1667794285295523, "dur": 869, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1667794285294970, "dur": 1437, "ph": "X", "name": "Write chrome-trace events", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1667794285849662, "dur": 232, "ph": "X", "name": "buildprogram0.traceevents", "args": {} },
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+,{ "pid":12345, "tid":0, "ts":1667794285316964, "dur":754, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285317721, "dur":52, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1667794285317795, "dur":14, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1667794285317809, "dur":337, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1667794285318275, "dur":253, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285318528, "dur":0, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285832818, "dur":300, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833118, "dur":41, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833159, "dur":23, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833183, "dur":32, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833215, "dur":23, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833238, "dur":38, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833276, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833279, "dur":16, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833295, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833298, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833304, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833306, "dur":14, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833320, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833321, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833325, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833327, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833332, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833333, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833339, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833340, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833345, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833346, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833351, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833353, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833357, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833359, "dur":9, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833368, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833369, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833374, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833375, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833380, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833381, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833385, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833386, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833391, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833392, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833396, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833397, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833402, "dur":12, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833414, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833419, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833445, "dur":2, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285833503, "dur":4346, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1667794285318202, "dur":333, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1667794285318535, "dur":3232, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1667794285321767, "dur":10585, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1667794285332353, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1667794285332642, "dur":6207, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1667794285338875, "dur":106, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1667794285338982, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1667794285338985, "dur":2369, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1667794285341408, "dur":131, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1667794285341541, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1667794285341546, "dur":5391, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1667794285346955, "dur":223, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":1, "ts":1667794285347179, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1667794285347182, "dur":3716, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":1, "ts":1667794285350938, "dur":221, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":1, "ts":1667794285351162, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1667794285351167, "dur":3642, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":1, "ts":1667794285354851, "dur":162, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.2D.IK.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1667794285355015, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1667794285355018, "dur":2537, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.2D.IK.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1667794285357850, "dur":566, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":1, "ts":1667794285358419, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1667794285358425, "dur":4651, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":1, "ts":1667794285363218, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":1, "ts":1667794285363280, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1667794285363285, "dur":2714, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":1, "ts":1667794285366018, "dur":466984, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1667794285318321, "dur":221, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1667794285318542, "dur":3172, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1667794285321714, "dur":66986, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":2, "ts":1667794285388703, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1667794285388713, "dur":606, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":2, "ts":1667794285389340, "dur":443481, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1667794285318396, "dur":159, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1667794285318555, "dur":3062, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1667794285321620, "dur":11988, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":3, "ts":1667794285333610, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1667794285333618, "dur":1184, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":3, "ts":1667794285334857, "dur":237, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":3, "ts":1667794285335096, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1667794285335101, "dur":2790, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":3, "ts":1667794285337958, "dur":129, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1667794285338089, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1667794285338094, "dur":1991, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1667794285340135, "dur":340, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1667794285340478, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1667794285340483, "dur":5700, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1667794285346201, "dur":186, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1667794285346388, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1667794285346391, "dur":4341, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1667794285350822, "dur":112, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":3, "ts":1667794285350936, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1667794285350957, "dur":3654, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":3, "ts":1667794285354817, "dur":264, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.2D.PixelPerfect.dll" }}
+,{ "pid":12345, "tid":3, "ts":1667794285355082, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1667794285355085, "dur":3508, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.2D.PixelPerfect.dll" }}
+,{ "pid":12345, "tid":3, "ts":1667794285358638, "dur":2118, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":3, "ts":1667794285360759, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1667794285360765, "dur":3733, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":3, "ts":1667794285364542, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":3, "ts":1667794285364582, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1667794285364586, "dur":1426, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":3, "ts":1667794285366057, "dur":466925, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1667794285318348, "dur":200, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1667794285318548, "dur":3090, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1667794285321639, "dur":11503, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":4, "ts":1667794285333145, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1667794285333158, "dur":1036, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":4, "ts":1667794285334251, "dur":143, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1667794285334397, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1667794285334402, "dur":2324, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1667794285336769, "dur":128, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1667794285336900, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1667794285336905, "dur":2025, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1667794285338976, "dur":168, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1667794285339147, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1667794285339152, "dur":5293, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1667794285344477, "dur":418, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1667794285344897, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1667794285344900, "dur":4873, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1667794285349817, "dur":153, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":4, "ts":1667794285350001, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1667794285350007, "dur":2897, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":4, "ts":1667794285353100, "dur":366, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Burst.dll" }}
+,{ "pid":12345, "tid":4, "ts":1667794285353468, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1667794285353473, "dur":3861, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Burst.dll" }}
+,{ "pid":12345, "tid":4, "ts":1667794285357396, "dur":1407, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":4, "ts":1667794285358805, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1667794285358808, "dur":3903, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":4, "ts":1667794285362763, "dur":139, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":4, "ts":1667794285362905, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1667794285363272, "dur":1995, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":4, "ts":1667794285365311, "dur":467714, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1667794285318380, "dur":172, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1667794285318552, "dur":3078, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1667794285321630, "dur":158, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":5, "ts":1667794285321791, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1667794285323543, "dur":3611, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":5, "ts":1667794285327185, "dur":463, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener.exe" }}
+,{ "pid":12345, "tid":5, "ts":1667794285327650, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1667794285327661, "dur":2466, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener.exe" }}
+,{ "pid":12345, "tid":5, "ts":1667794285330181, "dur":136, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285330319, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1667794285330324, "dur":927, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285331275, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285331349, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1667794285331352, "dur":1037, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285332441, "dur":132, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285332575, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1667794285332580, "dur":1331, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285333967, "dur":160, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285334129, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1667794285334134, "dur":1841, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285335996, "dur":103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285336100, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1667794285336102, "dur":2104, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285338387, "dur":226, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285338615, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1667794285338621, "dur":2996, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285341676, "dur":134, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285341812, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1667794285341816, "dur":4725, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285346607, "dur":172, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285346782, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1667794285346788, "dur":3568, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285350375, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285350436, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1667794285350439, "dur":3125, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285353616, "dur":153, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Burst.Cecil.Pdb.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285353772, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1667794285353776, "dur":3554, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Burst.Cecil.Pdb.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285357399, "dur":176, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285357577, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1667794285357582, "dur":3308, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285360933, "dur":6451, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285367387, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1667794285367393, "dur":3077, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":5, "ts":1667794285370494, "dur":462351, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1667794285318422, "dur":135, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1667794285318557, "dur":3058, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1667794285321619, "dur":2629, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":6, "ts":1667794285324249, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1667794285324340, "dur":3421, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":6, "ts":1667794285327777, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285327851, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1667794285329844, "dur":687, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285330546, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285330604, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1667794285330607, "dur":756, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285331401, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285331469, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1667794285331471, "dur":924, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285332454, "dur":130, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285332586, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1667794285332591, "dur":1385, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285334023, "dur":124, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285334149, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1667794285334154, "dur":1854, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285336027, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285336093, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1667794285336096, "dur":2530, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285338670, "dur":185, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285338857, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1667794285338862, "dur":2487, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285341400, "dur":120, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285341522, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1667794285341528, "dur":5128, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285346787, "dur":624, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285347412, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1667794285347415, "dur":3762, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285351197, "dur":152, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285351351, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1667794285351353, "dur":3955, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285355356, "dur":165, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.2D.Common.Runtime.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285355524, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1667794285355533, "dur":2322, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.2D.Common.Runtime.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285357913, "dur":378, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285358294, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1667794285358299, "dur":4537, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":6, "ts":1667794285362895, "dur":47, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":6, "ts":1667794285362993, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1667794285363133, "dur":2106, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":6, "ts":1667794285365288, "dur":467754, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1667794285318460, "dur":101, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1667794285318561, "dur":3283, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1667794285321844, "dur":126, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":7, "ts":1667794285321972, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1667794285325509, "dur":4592, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":7, "ts":1667794285330129, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285330209, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1667794285330286, "dur":1046, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285331377, "dur":136, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285331515, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1667794285331520, "dur":1406, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285332969, "dur":140, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285333112, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1667794285333117, "dur":1321, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285334493, "dur":633, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285335129, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1667794285335135, "dur":2639, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285337824, "dur":130, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285337977, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1667794285337982, "dur":1518, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285339551, "dur":125, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285339696, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1667794285339702, "dur":5311, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285345068, "dur":133, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285345204, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1667794285345209, "dur":4140, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285349398, "dur":193, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285349593, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1667794285349598, "dur":3289, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285353002, "dur":136, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Burst.Unsafe.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285353140, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1667794285353145, "dur":3008, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Burst.Unsafe.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285356194, "dur":291, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285356488, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1667794285356493, "dur":2895, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285359425, "dur":168, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285359596, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1667794285359601, "dur":3911, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":7, "ts":1667794285363560, "dur":187, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":7, "ts":1667794285363750, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1667794285363755, "dur":1744, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":7, "ts":1667794285365545, "dur":467494, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1667794285318495, "dur":68, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1667794285318563, "dur":3135, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1667794285321698, "dur":10417, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1667794285332117, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1667794285332127, "dur":3345, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1667794285335502, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1667794285335562, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1667794285335565, "dur":2614, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1667794285338208, "dur":212, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1667794285338423, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1667794285338428, "dur":2016, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1667794285340476, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1667794285340544, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1667794285340547, "dur":5185, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1667794285345754, "dur":170, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1667794285345931, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1667794285345935, "dur":4486, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1667794285350440, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":8, "ts":1667794285350492, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1667794285350626, "dur":3620, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":8, "ts":1667794285354263, "dur":356, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Burst.Cecil.dll" }}
+,{ "pid":12345, "tid":8, "ts":1667794285354619, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1667794285354622, "dur":2448, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Burst.Cecil.dll" }}
+,{ "pid":12345, "tid":8, "ts":1667794285357152, "dur":141, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Runtime.dll" }}
+,{ "pid":12345, "tid":8, "ts":1667794285357295, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1667794285357300, "dur":3637, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Runtime.dll" }}
+,{ "pid":12345, "tid":8, "ts":1667794285360960, "dur":122, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":8, "ts":1667794285361083, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1667794285361085, "dur":2270, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":8, "ts":1667794285363373, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":8, "ts":1667794285363434, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1667794285363436, "dur":1310, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":8, "ts":1667794285364789, "dur":108, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/boot.config" }}
+,{ "pid":12345, "tid":8, "ts":1667794285364899, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1667794285364903, "dur":1112, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/boot.config" }}
+,{ "pid":12345, "tid":8, "ts":1667794285366041, "dur":466951, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1667794285318529, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1667794285318529, "dur":3081, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1667794285321618, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":9, "ts":1667794285321622, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1667794285322777, "dur":968, "ph":"X", "name": "WriteText",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":9, "ts":1667794285323749, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/app.info" }}
+,{ "pid":12345, "tid":9, "ts":1667794285323814, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1667794285324044, "dur":1402, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/app.info" }}
+,{ "pid":12345, "tid":9, "ts":1667794285325448, "dur":492061, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":9, "ts":1667794285817519, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1667794285817534, "dur":15173, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":9, "ts":1667794285832754, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":9, "ts":1667794285832757, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1667794285318560, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1667794285318561, "dur":3173, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1667794285321734, "dur":272, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":10, "ts":1667794285322007, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1667794285325989, "dur":15799, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":10, "ts":1667794285341858, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1667794285341919, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1667794285341921, "dur":4782, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1667794285346799, "dur":190, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1667794285346991, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1667794285346999, "dur":3774, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1667794285350795, "dur":76, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":10, "ts":1667794285350872, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1667794285350875, "dur":3735, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":10, "ts":1667794285354688, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.2D.SpriteShape.Runtime.dll" }}
+,{ "pid":12345, "tid":10, "ts":1667794285354784, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1667794285354787, "dur":2539, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.2D.SpriteShape.Runtime.dll" }}
+,{ "pid":12345, "tid":10, "ts":1667794285357385, "dur":175, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":10, "ts":1667794285357562, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1667794285357567, "dur":3054, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":10, "ts":1667794285360816, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":10, "ts":1667794285360906, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1667794285360909, "dur":2155, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":10, "ts":1667794285363081, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":10, "ts":1667794285363105, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1667794285363108, "dur":10747, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":10, "ts":1667794285373873, "dur":458959, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1667794285318615, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1667794285318615, "dur":3012, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1667794285321627, "dur":10553, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":11, "ts":1667794285332183, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1667794285332205, "dur":13190, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":11, "ts":1667794285345416, "dur":339, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1667794285345760, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1667794285345765, "dur":3990, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1667794285349802, "dur":339, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":11, "ts":1667794285350143, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1667794285350148, "dur":3685, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":11, "ts":1667794285353875, "dur":126, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Burst.Cecil.Mdb.dll" }}
+,{ "pid":12345, "tid":11, "ts":1667794285354003, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1667794285354007, "dur":2923, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Burst.Cecil.Mdb.dll" }}
+,{ "pid":12345, "tid":11, "ts":1667794285356956, "dur":400, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":11, "ts":1667794285357358, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1667794285357361, "dur":2930, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":11, "ts":1667794285360324, "dur":395, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":11, "ts":1667794285360730, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1667794285360733, "dur":3182, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":11, "ts":1667794285363941, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":11, "ts":1667794285363963, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1667794285363966, "dur":2278, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":11, "ts":1667794285366264, "dur":466702, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1667794285318637, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1667794285318637, "dur":2974, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1667794285321619, "dur":5724, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":12, "ts":1667794285327346, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1667794285329456, "dur":715, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":12, "ts":1667794285330195, "dur":78, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285330274, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1667794285330296, "dur":894, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285331209, "dur":76, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285331286, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1667794285331289, "dur":508, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285331815, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285331883, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1667794285331886, "dur":1194, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285333100, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285333174, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1667794285333177, "dur":1734, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285334932, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285335005, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1667794285335008, "dur":1531, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285336562, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285336651, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1667794285336654, "dur":2198, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285338876, "dur":133, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285339010, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1667794285339014, "dur":2580, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285341617, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285341688, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1667794285341691, "dur":4477, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285346187, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285346250, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1667794285346252, "dur":4557, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285350860, "dur":109, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285350971, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1667794285350976, "dur":4603, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285355840, "dur":7309, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285363150, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1667794285363153, "dur":5228, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":12, "ts":1667794285368414, "dur":464490, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1667794285318676, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1667794285318677, "dur":2937, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1667794285321619, "dur":5276, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":13, "ts":1667794285326897, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1667794285326904, "dur":749, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":13, "ts":1667794285327673, "dur":1653, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":13, "ts":1667794285329328, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1667794285329695, "dur":43319, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":13, "ts":1667794285373035, "dur":459793, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1667794285318711, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1667794285318711, "dur":2902, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1667794285321618, "dur":4960, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":14, "ts":1667794285326580, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1667794285326694, "dur":7105, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":14, "ts":1667794285333827, "dur":530, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1667794285334359, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1667794285334362, "dur":2240, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1667794285336644, "dur":136, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1667794285336783, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1667794285336788, "dur":1077, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1667794285337886, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1667794285337984, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1667794285337990, "dur":1578, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1667794285339590, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1667794285339660, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1667794285339663, "dur":5298, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1667794285344981, "dur":159, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1667794285345142, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1667794285345145, "dur":4305, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1667794285349475, "dur":175, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":14, "ts":1667794285349651, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1667794285349654, "dur":3142, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":14, "ts":1667794285352817, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.InternalAPIEngineBridge.001.dll" }}
+,{ "pid":12345, "tid":14, "ts":1667794285352882, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1667794285352885, "dur":3159, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.InternalAPIEngineBridge.001.dll" }}
+,{ "pid":12345, "tid":14, "ts":1667794285356090, "dur":138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":14, "ts":1667794285356230, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1667794285356235, "dur":2414, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":14, "ts":1667794285358713, "dur":1023, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":14, "ts":1667794285359737, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1667794285359739, "dur":4642, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":14, "ts":1667794285364429, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/level0" }}
+,{ "pid":12345, "tid":14, "ts":1667794285364505, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1667794285364510, "dur":2140, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/level0" }}
+,{ "pid":12345, "tid":14, "ts":1667794285366684, "dur":466243, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1667794285318738, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1667794285318738, "dur":3094, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1667794285321835, "dur":133, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":15, "ts":1667794285321968, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1667794285324803, "dur":13189, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":15, "ts":1667794285338048, "dur":776, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1667794285338827, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1667794285338832, "dur":2574, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1667794285341574, "dur":124, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1667794285341700, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1667794285341703, "dur":5521, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1667794285347278, "dur":154, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":15, "ts":1667794285347434, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1667794285347439, "dur":4180, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":15, "ts":1667794285351662, "dur":124, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":15, "ts":1667794285351787, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1667794285351790, "dur":3530, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":15, "ts":1667794285355361, "dur":165, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.2D.Animation.Runtime.dll" }}
+,{ "pid":12345, "tid":15, "ts":1667794285355527, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1667794285355531, "dur":3105, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.2D.Animation.Runtime.dll" }}
+,{ "pid":12345, "tid":15, "ts":1667794285358939, "dur":691, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":15, "ts":1667794285359633, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1667794285359638, "dur":4678, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":15, "ts":1667794285364364, "dur":44, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/resources.assets" }}
+,{ "pid":12345, "tid":15, "ts":1667794285364410, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1667794285364414, "dur":1797, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/resources.assets" }}
+,{ "pid":12345, "tid":15, "ts":1667794285366263, "dur":466612, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1667794285318768, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1667794285318769, "dur":3100, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1667794285321869, "dur":18507, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":16, "ts":1667794285340378, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1667794285340584, "dur":1453, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":16, "ts":1667794285342056, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1667794285342113, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1667794285342116, "dur":4961, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1667794285347159, "dur":304, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":16, "ts":1667794285347464, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1667794285347467, "dur":3634, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":16, "ts":1667794285351120, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":16, "ts":1667794285351185, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1667794285351187, "dur":3239, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":16, "ts":1667794285354443, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.2D.Tilemap.Extras.dll" }}
+,{ "pid":12345, "tid":16, "ts":1667794285354517, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1667794285354520, "dur":2783, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.2D.Tilemap.Extras.dll" }}
+,{ "pid":12345, "tid":16, "ts":1667794285357329, "dur":176, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":16, "ts":1667794285357506, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1667794285357508, "dur":4522, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":16, "ts":1667794285362051, "dur":78, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":16, "ts":1667794285362131, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1667794285362134, "dur":2291, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":16, "ts":1667794285364452, "dur":32, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":16, "ts":1667794285364485, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1667794285364488, "dur":1810, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":16, "ts":1667794285366319, "dur":466636, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1667794285318824, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1667794285318824, "dur":3027, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1667794285321851, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":17, "ts":1667794285321926, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1667794285323895, "dur":10215, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":17, "ts":1667794285334132, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1667794285334199, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1667794285334202, "dur":2140, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1667794285336388, "dur":248, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1667794285336639, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1667794285336644, "dur":1424, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1667794285338089, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1667794285338163, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1667794285338165, "dur":1851, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1667794285340043, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1667794285340111, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1667794285340114, "dur":5377, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1667794285345512, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1667794285345592, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1667794285345594, "dur":4264, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1667794285349878, "dur":219, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":17, "ts":1667794285350099, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1667794285350105, "dur":3021, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":17, "ts":1667794285353167, "dur":193, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Burst.Cecil.Rocks.dll" }}
+,{ "pid":12345, "tid":17, "ts":1667794285353363, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1667794285353368, "dur":2916, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Burst.Cecil.Rocks.dll" }}
+,{ "pid":12345, "tid":17, "ts":1667794285356301, "dur":151, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":17, "ts":1667794285356453, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1667794285356456, "dur":3662, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":17, "ts":1667794285360137, "dur":398, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":17, "ts":1667794285360538, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1667794285360544, "dur":4553, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":17, "ts":1667794285365142, "dur":467678, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1667794285318855, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1667794285318855, "dur":2972, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1667794285321828, "dur":1293, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":18, "ts":1667794285323124, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1667794285323266, "dur":2163, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":18, "ts":1667794285325450, "dur":43749, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":18, "ts":1667794285369202, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1667794285369207, "dur":1369, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":18, "ts":1667794285370594, "dur":462245, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1667794285318889, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1667794285318890, "dur":2913, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1667794285321804, "dur":438, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":19, "ts":1667794285322243, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1667794285322990, "dur":2291, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":19, "ts":1667794285325308, "dur":229654, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":19, "ts":1667794285554966, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1667794285555048, "dur":4125, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":19, "ts":1667794285559217, "dur":273730, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1667794285318917, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1667794285318917, "dur":2850, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1667794285321769, "dur":10477, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":20, "ts":1667794285332248, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1667794285332256, "dur":1456, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":20, "ts":1667794285333732, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1667794285333808, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1667794285333819, "dur":1310, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1667794285335168, "dur":130, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1667794285335332, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1667794285335336, "dur":2283, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1667794285337641, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1667794285337711, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1667794285337714, "dur":1458, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1667794285339190, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1667794285339245, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1667794285339247, "dur":2014, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1667794285341292, "dur":109, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1667794285341410, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1667794285341413, "dur":5766, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1667794285347244, "dur":284, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":20, "ts":1667794285347529, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1667794285347532, "dur":4266, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":20, "ts":1667794285351816, "dur":246, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":20, "ts":1667794285352063, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1667794285352066, "dur":3632, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":20, "ts":1667794285355715, "dur":94, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":20, "ts":1667794285355810, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1667794285355812, "dur":2894, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":20, "ts":1667794285358746, "dur":348, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":20, "ts":1667794285359097, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1667794285359103, "dur":3620, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":20, "ts":1667794285362750, "dur":181, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Plugins/x86_64/lib_burst_generated.dll" }}
+,{ "pid":12345, "tid":20, "ts":1667794285362933, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1667794285363479, "dur":1850, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/S/Desktop/gamer/Gobbly Gardner/GobblyGuardener_Data/Plugins/x86_64/lib_burst_generated.dll" }}
+,{ "pid":12345, "tid":20, "ts":1667794285365371, "dur":467660, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1667794285841032, "dur":1841, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid": 0, "tid": 1, "ts": 1667794285849958, "dur": 672, "ph": "X", "name": "backend_profiler1.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1667794285849554, "dur": 1099, "ph": "X", "name": "Write chrome-trace events", "args": {} },
